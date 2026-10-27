@@ -1,0 +1,18 @@
+{
+  "synthetic": true,
+  "seed": 42,
+  "customers": 120,
+  "events": 6529,
+  "observed_until_exclusive": "2025-08-01T00:00:00Z",
+  "snapshots": {
+    "train": "2025-02-01",
+    "validation": "2025-04-01",
+    "test": "2025-06-01"
+  },
+  "sha256": {
+    "customers.csv": "9715d8dd9fd7c7467d49d349ae268fed5f9b66e9cc466c2232b9436ca4960040",
+    "events.csv": "ac7b819015cd6e3371fd663bb9567560b9fd02693174e6106903f718652a171c",
+    "events_dirty.csv": "ca003cdc197c11da0d6f744196a5ead67079e60210d8d44947f74f89023bcd72",
+    "events_tiny.csv": "fb44e34992de4aa004ea17c119791cc2345fac29bcac39d8c42f61e9e8564e38"
+  }
+}

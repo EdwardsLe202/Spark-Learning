@@ -1,0 +1,24 @@
+name: Check learning repository
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  repository:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check curriculum, links and data contracts
+        run: python scripts/check_repo.py
+      - name: Check example and exercise syntax
+        run: python -m compileall -q spark_lab.py scripts day-*
+
+# Đây là kiểm tra cấu trúc và dữ liệu của khóa học, chưa chạy ví dụ Spark.
+# Kết quả thực thi mẫu được ghi riêng trong docs/KIEM_TRA.md.

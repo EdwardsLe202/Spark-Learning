@@ -1,0 +1,2 @@
+# Khóa nền Spark: cài từ ngày 03, dùng Python 3.11 + Java 17.
+pyspark==3.5.7

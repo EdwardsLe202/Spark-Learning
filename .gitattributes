@@ -1,0 +1,4 @@
+*.csv -text whitespace=cr-at-eol
+*.docx binary
+# Bản lưu cần giữ nguyên byte, kể cả dòng trắng cuối file từ bản gốc.
+tham_khao/** -text whitespace=-blank-at-eof,blank-at-eol,space-before-tab,cr-at-eol

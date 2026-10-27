@@ -1,0 +1,23 @@
+"""Ngày 65: khung tự làm; đọc thuc_hanh.md, chưa phải lời giải.
+Chạy: python scripts/run_day.py 65
+"""
+from pathlib import Path
+import sys, os, json
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from course_support import (DATA, FULL, FEATURES, output, write_json, read_json, data_hash,
+    snapshot_pd, sklearn_pipeline, fit_sklearn, ensure_demo_model, setup_tracking, metric_counts)
+import numpy as np
+
+def main():
+    out = output(65, exercise=True)
+    print("Khung bài làm: hãy tự thực hiện từng bước; chưa có kết quả nghiệm thu.")
+    # 1. Tự lắp pipeline từ các thành phần thay vì gọi helper.
+    # 2. Giải thích median được học từ đâu và cột nào one-hot.
+    # 3. Kiểm tra pipeline nhận đủ năm cột contract.
+
+    # Viết phần xử lý của bạn bên dưới.
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,11 @@
+order_id,customer_id,order_date,amount,status
+O001,C001,2025-01-01,100000,completed
+O002,C001,2025-01-03,200000,completed
+O002,C001,2025-01-03,200000,completed
+O009,,2025-01-03,80000,completed
+O010,C003,not-a-date,60000,completed
+O011,C002,2025-01-03,-10000,completed
+O012,C003,2025-01-03,abc,completed
+O013,C999,2025-01-03,20000,completed
+O014,C004,2025-01-03,,completed
+O015,C005,2025-01-03,90000,completed

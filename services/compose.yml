@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: services/Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      COURSE_API_KEY: ${COURSE_API_KEY:?Set COURSE_API_KEY in your terminal}
+    volumes:
+      - ../artifacts/full:/app/artifacts/full:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3

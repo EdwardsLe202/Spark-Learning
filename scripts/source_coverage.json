@@ -1,0 +1,1081 @@
+[
+  {
+    "source_id": "01.1",
+    "topic": "Spark và PySpark là gì; phân biệt bộ máy xử lý với nơi lưu dữ liệu.",
+    "days": [
+      1
+    ]
+  },
+  {
+    "source_id": "01.2",
+    "topic": "Xử lý song song và phân tán; batch và streaming qua ví dụ đơn hàng.",
+    "days": [
+      31
+    ]
+  },
+  {
+    "source_id": "01.3",
+    "topic": "So sánh pandas, SQL và Spark theo bộ nhớ, thời gian và độ phức tạp.",
+    "days": [
+      77
+    ]
+  },
+  {
+    "source_id": "01.4",
+    "topic": "Phân biệt pipeline dữ liệu, pipeline ML và quy trình MLOps.",
+    "days": [
+      81,
+      86
+    ]
+  },
+  {
+    "source_id": "01.5",
+    "topic": "Hai hướng ML: Spark chuẩn bị dữ liệu cho thư viện khác hoặc dùng Spark MLlib.",
+    "days": [
+      67,
+      78
+    ]
+  },
+  {
+    "source_id": "02.1",
+    "topic": "Kiểm tra chip Intel hay Apple Silicon, RAM, dung lượng trống và kiến trúc terminal.",
+    "days": [
+      95
+    ]
+  },
+  {
+    "source_id": "02.2",
+    "topic": "Chọn bộ phiên bản Java, Python và PySpark tương thích theo tài liệu chính thức.",
+    "days": [
+      3
+    ]
+  },
+  {
+    "source_id": "02.3",
+    "topic": "Tạo môi trường Python riêng, ghi dependency và cấu hình JAVA_HOME khi cần.",
+    "days": [
+      3
+    ]
+  },
+  {
+    "source_id": "02.4",
+    "topic": "Tạo SparkSession, dùng notebook và file Python; dừng session đúng cách.",
+    "days": [
+      4
+    ]
+  },
+  {
+    "source_id": "02.5",
+    "topic": "Kiểm tra local mode, Spark UI, log và các lỗi khởi động thường gặp.",
+    "days": [
+      32
+    ]
+  },
+  {
+    "source_id": "03.1",
+    "topic": "Driver, executor, worker và cluster manager; trách nhiệm từng thành phần.",
+    "days": [
+      31
+    ]
+  },
+  {
+    "source_id": "03.2",
+    "topic": "Partition là gì; task xử lý dữ liệu và mức song song.",
+    "days": [
+      27
+    ]
+  },
+  {
+    "source_id": "03.3",
+    "topic": "Transformation, action và lazy evaluation qua ví dụ đọc lọc nhóm.",
+    "days": [
+      26
+    ]
+  },
+  {
+    "source_id": "03.4",
+    "topic": "Application, job, stage và task; nhận biết nơi xuất hiện shuffle.",
+    "days": [
+      32
+    ]
+  },
+  {
+    "source_id": "03.5",
+    "topic": "SparkSession, Spark Classic và Spark Connect ở mức khái niệm; giới hạn của local mode.",
+    "days": [
+      31,
+      100
+    ]
+  },
+  {
+    "source_id": "04.1",
+    "topic": "Tạo DataFrame, StructType, StructField; tên cột và kiểu dữ liệu.",
+    "days": [
+      5
+    ]
+  },
+  {
+    "source_id": "04.2",
+    "topic": "select, alias, filter, withColumn, drop và biểu thức Column.",
+    "days": [
+      7
+    ]
+  },
+  {
+    "source_id": "04.3",
+    "topic": "cast, when, otherwise, hàm số học; phân biệt biểu thức cột với giá trị Python.",
+    "days": [
+      9,
+      13
+    ]
+  },
+  {
+    "source_id": "04.4",
+    "topic": "Temp view và spark.sql; dùng SQL quen thuộc để kiểm tra kết quả.",
+    "days": [
+      17
+    ]
+  },
+  {
+    "source_id": "04.5",
+    "topic": "show, count, schema, explain; thứ tự dòng chỉ được xác định khi có sắp xếp phù hợp.",
+    "days": [
+      4,
+      33
+    ]
+  },
+  {
+    "source_id": "05.1",
+    "topic": "NULL, NaN, chuỗi rỗng và giá trị không hợp lệ; điều kiện ba trạng thái trong SQL.",
+    "days": [
+      11,
+      13
+    ]
+  },
+  {
+    "source_id": "05.2",
+    "topic": "Duplicate theo cả dòng hoặc khóa nghiệp vụ; quy tắc giữ bản ghi.",
+    "days": [
+      12
+    ]
+  },
+  {
+    "source_id": "05.3",
+    "topic": "Xử lý chuỗi, ngày giờ, timezone và parse dữ liệu lỗi.",
+    "days": [
+      15
+    ]
+  },
+  {
+    "source_id": "05.4",
+    "topic": "Struct, array, map, JSON và explode; ảnh hưởng đến số dòng.",
+    "days": [
+      41
+    ]
+  },
+  {
+    "source_id": "05.5",
+    "topic": "Thống kê, tần suất, phân vị xấp xỉ, lấy mẫu để vẽ biểu đồ.",
+    "days": [
+      37,
+      77
+    ]
+  },
+  {
+    "source_id": "06.1",
+    "topic": "groupBy, agg, distinct và các phép tổng hợp điều kiện.",
+    "days": [
+      10
+    ]
+  },
+  {
+    "source_id": "06.2",
+    "topic": "Inner, left, full, semi và anti join; kiểm tra khóa và cardinality.",
+    "days": [
+      18
+    ]
+  },
+  {
+    "source_id": "06.3",
+    "topic": "Join làm nhân số dòng; cột trùng tên, NULL và khóa không khớp.",
+    "days": [
+      20
+    ]
+  },
+  {
+    "source_id": "06.4",
+    "topic": "Window partitionBy, orderBy, row_number, rank, lag và lead.",
+    "days": [
+      21
+    ]
+  },
+  {
+    "source_id": "06.5",
+    "topic": "rowsBetween và rangeBetween; cách xác định cửa sổ thời gian và xử lý giá trị bằng nhau.",
+    "days": [
+      22,
+      46
+    ]
+  },
+  {
+    "source_id": "07.1",
+    "topic": "CSV, JSON, Parquet; schema rõ ràng và chi phí đọc theo cột.",
+    "days": [
+      6,
+      16
+    ]
+  },
+  {
+    "source_id": "07.2",
+    "topic": "Chế độ append, overwrite, error và ignore; kiểm tra đích trước khi ghi.",
+    "days": [
+      16,
+      25,
+      42
+    ]
+  },
+  {
+    "source_id": "07.3",
+    "topic": "Partition theo thư mục, partition pruning và predicate pushdown.",
+    "days": [
+      42
+    ]
+  },
+  {
+    "source_id": "07.4",
+    "topic": "JDBC, object storage, data lake; quyền truy cập và quản lý thông tin kết nối.",
+    "days": [
+      43
+    ]
+  },
+  {
+    "source_id": "07.5",
+    "topic": "Catalog, metadata, bảng và giới thiệu Delta Lake hoặc Iceberg cho transaction và lịch sử.",
+    "days": [
+      42,
+      44
+    ]
+  },
+  {
+    "source_id": "08.1",
+    "topic": "Partition trong thực thi khác với partition theo thư mục lưu trữ.",
+    "days": [
+      36
+    ]
+  },
+  {
+    "source_id": "08.2",
+    "topic": "Narrow và wide dependency; các thao tác thường tạo shuffle.",
+    "days": [
+      27
+    ]
+  },
+  {
+    "source_id": "08.3",
+    "topic": "repartition và coalesce; ảnh hưởng đến song song và kích thước đầu ra.",
+    "days": [
+      36
+    ]
+  },
+  {
+    "source_id": "08.4",
+    "topic": "RDD, map, filter, reduceByKey, lineage và khả năng tính lại dữ liệu.",
+    "days": [
+      34
+    ]
+  },
+  {
+    "source_id": "08.5",
+    "topic": "Broadcast variable, accumulator và rủi ro side effect khi task chạy lại.",
+    "days": [
+      35
+    ]
+  },
+  {
+    "source_id": "09.1",
+    "topic": "explain, logical plan, physical plan; vai trò tối ưu truy vấn và AQE.",
+    "days": [
+      33
+    ]
+  },
+  {
+    "source_id": "09.2",
+    "topic": "Broadcast join, sort merge join; kích thước dữ liệu và điều kiện lựa chọn.",
+    "days": [
+      38
+    ]
+  },
+  {
+    "source_id": "09.3",
+    "topic": "Data skew, task chậm, spill và lỗi thiếu bộ nhớ ở driver hoặc executor.",
+    "days": [
+      37
+    ]
+  },
+  {
+    "source_id": "09.4",
+    "topic": "cache, persist, unpersist; chọn điểm tái sử dụng và đo lợi ích.",
+    "days": [
+      28,
+      45
+    ]
+  },
+  {
+    "source_id": "09.5",
+    "topic": "Small files, số partition, built in function, Python UDF, pandas UDF và Arrow.",
+    "days": [
+      40
+    ]
+  },
+  {
+    "source_id": "10.1",
+    "topic": "Batch theo data interval, incremental load và idempotency.",
+    "days": [
+      46
+    ]
+  },
+  {
+    "source_id": "10.2",
+    "topic": "Late data, dedup, upsert theo khả năng của storage và xử lý schema thay đổi.",
+    "days": [
+      47,
+      48
+    ]
+  },
+  {
+    "source_id": "10.3",
+    "topic": "Backfill, retry, checkpoint dữ liệu và kiểm tra chất lượng tại mỗi bước.",
+    "days": [
+      49,
+      51
+    ]
+  },
+  {
+    "source_id": "10.4",
+    "topic": "Structured Streaming, micro batch, source, sink và checkpointLocation.",
+    "days": [
+      50
+    ]
+  },
+  {
+    "source_id": "10.5",
+    "topic": "Event time, processing time, watermark, state và giới hạn bảo đảm xử lý.",
+    "days": [
+      52,
+      53,
+      54,
+      55
+    ]
+  },
+  {
+    "source_id": "11.1",
+    "topic": "Định nghĩa entity, thời điểm dự đoán, observation window và label window.",
+    "days": [
+      56
+    ]
+  },
+  {
+    "source_id": "11.2",
+    "topic": "Tạo nhãn churn cùng quy tắc xử lý khách hàng chưa đủ thời gian quan sát.",
+    "days": [
+      58
+    ]
+  },
+  {
+    "source_id": "11.3",
+    "topic": "Feature lịch sử, point in time join và dữ liệu được cập nhật muộn.",
+    "days": [
+      57
+    ]
+  },
+  {
+    "source_id": "11.4",
+    "topic": "Chia train, validation và test theo thời gian hoặc nhóm phù hợp bài toán.",
+    "days": [
+      59
+    ]
+  },
+  {
+    "source_id": "11.5",
+    "topic": "Fit imputer, scaler, encoder trên train; lưu feature schema và phiên bản dữ liệu.",
+    "days": [
+      66
+    ]
+  },
+  {
+    "source_id": "12.1",
+    "topic": "Phân biệt Estimator, Transformer, Model và Pipeline trong pyspark.ml.",
+    "days": [
+      67
+    ]
+  },
+  {
+    "source_id": "12.2",
+    "topic": "Imputer, StringIndexer, OneHotEncoder, VectorAssembler và xử lý category chưa gặp.",
+    "days": [
+      68,
+      69
+    ]
+  },
+  {
+    "source_id": "12.3",
+    "topic": "Scaling khi phù hợp thuật toán; vector đặc trưng thưa và đặc.",
+    "days": [
+      68
+    ]
+  },
+  {
+    "source_id": "12.4",
+    "topic": "Logistic regression, tree model, regression và clustering ở mức ứng dụng.",
+    "days": [
+      70,
+      71
+    ]
+  },
+  {
+    "source_id": "12.5",
+    "topic": "fit, transform, save, load; giữ nhất quán tên cột, schema và preprocessing.",
+    "days": [
+      72
+    ]
+  },
+  {
+    "source_id": "13.1",
+    "topic": "Baseline, class imbalance, confusion matrix, precision, recall, PR AUC và ROC AUC.",
+    "days": [
+      62,
+      63,
+      64
+    ]
+  },
+  {
+    "source_id": "13.2",
+    "topic": "Chọn threshold bằng validation và chi phí nghiệp vụ; hiệu chỉnh xác suất khi cần.",
+    "days": [
+      73
+    ]
+  },
+  {
+    "source_id": "13.3",
+    "topic": "CrossValidator, TrainValidationSplit và ParamGridBuilder.",
+    "days": [
+      74
+    ]
+  },
+  {
+    "source_id": "13.4",
+    "topic": "Validation theo thời gian bằng fold hoặc vòng lặp phù hợp; tránh dùng mặc định sai bài toán.",
+    "days": [
+      75
+    ]
+  },
+  {
+    "source_id": "13.5",
+    "topic": "Đánh giá theo nhóm, khoảng bất định và chốt test sau khi quyết định mô hình.",
+    "days": [
+      76
+    ]
+  },
+  {
+    "source_id": "14.1",
+    "topic": "Spark MLlib và scikit learn giải quyết các phạm vi khác nhau.",
+    "days": [
+      77
+    ]
+  },
+  {
+    "source_id": "14.2",
+    "topic": "Sampling, aggregation và ước lượng bộ nhớ trước khi chuyển sang pandas.",
+    "days": [
+      77
+    ]
+  },
+  {
+    "source_id": "14.3",
+    "topic": "pandas API on Spark, pandas UDF và mapInPandas ở mức sử dụng có mục đích.",
+    "days": [
+      40,
+      77
+    ]
+  },
+  {
+    "source_id": "14.4",
+    "topic": "Spark chuẩn bị dữ liệu cho PyTorch; định dạng, shard và hợp đồng dữ liệu.",
+    "days": [
+      79
+    ]
+  },
+  {
+    "source_id": "14.5",
+    "topic": "Phân biệt huấn luyện phân tán một mô hình với chạy nhiều thí nghiệm độc lập.",
+    "days": [
+      79
+    ]
+  },
+  {
+    "source_id": "15.1",
+    "topic": "MLflow experiment, run, parameter, metric, tag và artifact.",
+    "days": [
+      86
+    ]
+  },
+  {
+    "source_id": "15.2",
+    "topic": "Ghi thông tin pipeline Spark và mô hình từ thư viện khác; hiểu giới hạn autolog.",
+    "days": [
+      87
+    ]
+  },
+  {
+    "source_id": "15.3",
+    "topic": "Lưu model signature, input example, dependency và metadata dữ liệu.",
+    "days": [
+      88
+    ]
+  },
+  {
+    "source_id": "15.4",
+    "topic": "Registry, version, alias; chọn model candidate theo điều kiện đánh giá.",
+    "days": [
+      89
+    ]
+  },
+  {
+    "source_id": "15.5",
+    "topic": "Backend store, artifact store, local server và nguyên tắc quản lý quyền truy cập.",
+    "days": [
+      90
+    ]
+  },
+  {
+    "source_id": "16.1",
+    "topic": "Git, nhánh, commit, package, CLI và tách logic khỏi thao tác đọc ghi.",
+    "days": [
+      81
+    ]
+  },
+  {
+    "source_id": "16.2",
+    "topic": "Cấu hình theo môi trường, logging, exception và mã thoát.",
+    "days": [
+      85
+    ]
+  },
+  {
+    "source_id": "16.3",
+    "topic": "Unit test cho feature; integration test cho đọc ghi, train và predict.",
+    "days": [
+      83
+    ]
+  },
+  {
+    "source_id": "16.4",
+    "topic": "Kiểm tra schema, unique key, NULL, timestamp, leakage và data contract.",
+    "days": [
+      84
+    ]
+  },
+  {
+    "source_id": "16.5",
+    "topic": "Kiểm tra dependency, lint, kiểm thử nhanh trước khi chạy pipeline lớn.",
+    "days": [
+      82
+    ]
+  },
+  {
+    "source_id": "17.1",
+    "topic": "DAG, task, dependency, data interval và lịch chạy trong Airflow.",
+    "days": [
+      91
+    ]
+  },
+  {
+    "source_id": "17.2",
+    "topic": "Tách ingest, validate, features, train, evaluate, register và score.",
+    "days": [
+      92
+    ]
+  },
+  {
+    "source_id": "17.3",
+    "topic": "Retry, timeout, backfill, idempotency và checkpoint theo bước.",
+    "days": [
+      93
+    ]
+  },
+  {
+    "source_id": "17.4",
+    "topic": "Điều kiện dừng khi dữ liệu lỗi hoặc model không đạt; truyền metadata thay vì dữ liệu lớn.",
+    "days": [
+      94
+    ]
+  },
+  {
+    "source_id": "17.5",
+    "topic": "Theo dõi trạng thái, thông báo lỗi, hạn chế tài nguyên và tránh chạy chồng ngoài ý muốn.",
+    "days": [
+      94
+    ]
+  },
+  {
+    "source_id": "18.1",
+    "topic": "Docker image, container, network, volume và kiến trúc ARM hoặc x86.",
+    "days": [
+      95
+    ]
+  },
+  {
+    "source_id": "18.2",
+    "topic": "Dockerfile, dependency cố định, model artifact và cấu hình ngoài image.",
+    "days": [
+      96
+    ]
+  },
+  {
+    "source_id": "18.3",
+    "topic": "spark submit, batch scoring và ghi prediction cùng entity, thời gian, model version.",
+    "days": [
+      97
+    ]
+  },
+  {
+    "source_id": "18.4",
+    "topic": "So sánh batch inference với online inference; tái sử dụng preprocessing.",
+    "days": [
+      78
+    ]
+  },
+  {
+    "source_id": "18.5",
+    "topic": "Docker Compose cho mô hình học tập; health check và lưu dữ liệu bền vững.",
+    "days": [
+      98
+    ]
+  },
+  {
+    "source_id": "19.1",
+    "topic": "Local, development, staging và production; client mode và cluster mode.",
+    "days": [
+      100
+    ]
+  },
+  {
+    "source_id": "19.2",
+    "topic": "Spark Standalone, YARN, Kubernetes; chọn một môi trường để thực hành triển khai.",
+    "days": [
+      100
+    ]
+  },
+  {
+    "source_id": "19.3",
+    "topic": "Object storage, IAM, service account, network và secret management.",
+    "days": [
+      101
+    ]
+  },
+  {
+    "source_id": "19.4",
+    "topic": "CI cho test và build; CD cho phát hành có kiểm tra và rollback.",
+    "days": [
+      99
+    ]
+  },
+  {
+    "source_id": "19.5",
+    "topic": "Version image, model, dữ liệu, cấu hình; resource limit, quota và dự toán chi phí.",
+    "days": [
+      102
+    ]
+  },
+  {
+    "source_id": "20.1",
+    "topic": "Log, metric, trace; theo dõi runtime, lỗi, độ trễ và tài nguyên.",
+    "days": [
+      103
+    ]
+  },
+  {
+    "source_id": "20.2",
+    "topic": "Schema drift, missing rate, phân bố feature, prediction drift và data freshness.",
+    "days": [
+      103
+    ]
+  },
+  {
+    "source_id": "20.3",
+    "topic": "Data drift, concept drift và hiệu năng khi có nhãn; nhãn đến trễ.",
+    "days": [
+      104
+    ]
+  },
+  {
+    "source_id": "20.4",
+    "topic": "Ngưỡng cảnh báo, điều tra lỗi và phân tích theo nhóm khách hàng.",
+    "days": [
+      104
+    ]
+  },
+  {
+    "source_id": "20.5",
+    "topic": "Chính sách retrain, đánh giá candidate, rollout và rollback; lưu lịch sử quyết định.",
+    "days": [
+      105
+    ]
+  },
+  {
+    "source_id": "21.1",
+    "topic": "HTTP, request, response, status code, JSON và API contract.",
+    "days": [
+      106
+    ]
+  },
+  {
+    "source_id": "21.2",
+    "topic": "FastAPI, validation, schema, dependency và cấu hình dịch vụ.",
+    "days": [
+      107
+    ]
+  },
+  {
+    "source_id": "21.3",
+    "topic": "Load model khi khởi động, endpoint predict, health và readiness.",
+    "days": [
+      109
+    ]
+  },
+  {
+    "source_id": "21.4",
+    "topic": "Authentication, authorization, rate limit, timeout và giới hạn payload.",
+    "days": [
+      110
+    ]
+  },
+  {
+    "source_id": "21.5",
+    "topic": "Sync, async, queue và công việc nền; phân biệt tác vụ IO với tác vụ CPU hoặc GPU.",
+    "days": [
+      111
+    ]
+  },
+  {
+    "source_id": "22.1",
+    "topic": "Tensor, shape, dtype, device và thao tác cơ bản.",
+    "days": [
+      112
+    ]
+  },
+  {
+    "source_id": "22.2",
+    "topic": "Dataset, DataLoader, batch, forward, loss, backward và optimizer.",
+    "days": [
+      113
+    ]
+  },
+  {
+    "source_id": "22.3",
+    "topic": "Train, eval, no grad, overfitting, checkpoint và lưu load trọng số.",
+    "days": [
+      114
+    ]
+  },
+  {
+    "source_id": "22.4",
+    "topic": "Embedding, attention, Transformer và pretrained model ở mức ứng dụng.",
+    "days": [
+      115
+    ]
+  },
+  {
+    "source_id": "22.5",
+    "topic": "CPU, GPU, Apple MPS khi được hỗ trợ; bộ nhớ, batch size và giới hạn phần cứng.",
+    "days": [
+      116
+    ]
+  },
+  {
+    "source_id": "23.1",
+    "topic": "Latency, throughput, concurrency và p50, p95, p99.",
+    "days": [
+      117
+    ]
+  },
+  {
+    "source_id": "23.2",
+    "topic": "Model warm up, batching, worker, queue và giới hạn tài nguyên.",
+    "days": [
+      118
+    ]
+  },
+  {
+    "source_id": "23.3",
+    "topic": "Cache có khóa đúng, timeout, retry có giới hạn và backpressure.",
+    "days": [
+      118,
+      119
+    ]
+  },
+  {
+    "source_id": "23.4",
+    "topic": "Version endpoint, canary hoặc shadow theo nhu cầu; rollback.",
+    "days": [
+      119
+    ]
+  },
+  {
+    "source_id": "23.5",
+    "topic": "Load test, kiểm tra độ tương đương và phân tích điểm nghẽn.",
+    "days": [
+      120
+    ]
+  },
+  {
+    "source_id": "24.1",
+    "topic": "Token, context window, sinh văn bản, tham số lấy mẫu và giới hạn đầu ra.",
+    "days": [
+      121
+    ]
+  },
+  {
+    "source_id": "24.2",
+    "topic": "System instruction, prompt template, few shot và tách dữ liệu khỏi chỉ dẫn.",
+    "days": [
+      122
+    ]
+  },
+  {
+    "source_id": "24.3",
+    "topic": "Structured output, schema validation, retry có giới hạn và xử lý từ chối hoặc lỗi.",
+    "days": [
+      123
+    ]
+  },
+  {
+    "source_id": "24.4",
+    "topic": "Embedding, similarity; phân biệt prompting, RAG và fine tuning.",
+    "days": [
+      124,
+      129
+    ]
+  },
+  {
+    "source_id": "24.5",
+    "topic": "Chi phí, rate limit, timeout; tạo tập ví dụ để so sánh prompt.",
+    "days": [
+      125
+    ]
+  },
+  {
+    "source_id": "25.1",
+    "topic": "RAG gồm ingest, chunk, embed, index, retrieve và generate.",
+    "days": [
+      126
+    ]
+  },
+  {
+    "source_id": "25.2",
+    "topic": "Trích xuất văn bản, chất lượng parser, chunk size, overlap và ranh giới nội dung.",
+    "days": [
+      127
+    ]
+  },
+  {
+    "source_id": "25.3",
+    "topic": "Document ID, chunk ID, content hash, nguồn, phiên bản và quyền truy cập.",
+    "days": [
+      128
+    ]
+  },
+  {
+    "source_id": "25.4",
+    "topic": "Spark làm sạch và dedup hàng loạt; embedding job có batching, rate limit và retry.",
+    "days": [
+      131
+    ]
+  },
+  {
+    "source_id": "25.5",
+    "topic": "Vector store, upsert, xóa tài liệu, reindex và thay embedding model.",
+    "days": [
+      130
+    ]
+  },
+  {
+    "source_id": "26.1",
+    "topic": "Dense retrieval, sparse retrieval, keyword search và hybrid search.",
+    "days": [
+      132,
+      133,
+      134
+    ]
+  },
+  {
+    "source_id": "26.2",
+    "topic": "Top k, metadata filter, phân quyền truy xuất và các truy vấn theo phiên bản.",
+    "days": [
+      140
+    ]
+  },
+  {
+    "source_id": "26.3",
+    "topic": "Reranker, lựa chọn context và ảnh hưởng đến độ trễ.",
+    "days": [
+      135
+    ]
+  },
+  {
+    "source_id": "26.4",
+    "topic": "Recall at k, MRR, nDCG và mức độ đầy đủ của nhãn relevance.",
+    "days": [
+      136
+    ]
+  },
+  {
+    "source_id": "26.5",
+    "topic": "Phân tích lỗi do parser, chunk, embedding, retrieval và ranking.",
+    "days": [
+      136
+    ]
+  },
+  {
+    "source_id": "27.1",
+    "topic": "Bộ đánh giá gồm câu hỏi trả lời được, thiếu bằng chứng, mơ hồ và ngoài phạm vi.",
+    "days": [
+      138
+    ]
+  },
+  {
+    "source_id": "27.2",
+    "topic": "Correctness, groundedness, citation, abstention; tách metric retrieval với generation.",
+    "days": [
+      137
+    ]
+  },
+  {
+    "source_id": "27.3",
+    "topic": "Trace theo request, phiên bản prompt, model, index, token, latency và chi phí.",
+    "days": [
+      139
+    ]
+  },
+  {
+    "source_id": "27.4",
+    "topic": "Prompt injection từ tài liệu, rò rỉ dữ liệu, quyền truy cập và xử lý nội dung không tin cậy.",
+    "days": [
+      141
+    ]
+  },
+  {
+    "source_id": "27.5",
+    "topic": "Regression test, đánh giá thủ công và giới hạn của LLM judge.",
+    "days": [
+      141
+    ]
+  },
+  {
+    "source_id": "28.1",
+    "topic": "Tool calling, schema công cụ, workflow cố định và agent loop.",
+    "days": [
+      142
+    ]
+  },
+  {
+    "source_id": "28.2",
+    "topic": "Kiểm tra tham số, xử lý lỗi, timeout và phân loại lỗi có thể retry.",
+    "days": [
+      143
+    ]
+  },
+  {
+    "source_id": "28.3",
+    "topic": "Giới hạn số bước, token, thời gian và chi phí; điều kiện dừng.",
+    "days": [
+      144
+    ]
+  },
+  {
+    "source_id": "28.4",
+    "topic": "Công cụ chỉ đọc, quyền tối thiểu và xác nhận cho hành động ảnh hưởng dữ liệu.",
+    "days": [
+      140
+    ]
+  },
+  {
+    "source_id": "28.5",
+    "topic": "Đánh giá thành công của tác vụ, trace và kiểm thử tình huống công cụ trả dữ liệu xấu.",
+    "days": [
+      145
+    ]
+  },
+  {
+    "source_id": "29.1",
+    "topic": "Chọn giữa cải thiện dữ liệu, prompt, retrieval và fine tuning.",
+    "days": [
+      146
+    ]
+  },
+  {
+    "source_id": "29.2",
+    "topic": "Dataset hướng dẫn, quyền sử dụng, dedup, train validation test và contamination.",
+    "days": [
+      147
+    ]
+  },
+  {
+    "source_id": "29.3",
+    "topic": "Full fine tuning, PEFT, LoRA và quantization ở mức khái niệm.",
+    "days": [
+      148
+    ]
+  },
+  {
+    "source_id": "29.4",
+    "topic": "Chi phí train, checkpoint, metric và so sánh với baseline giữ nguyên.",
+    "days": [
+      148
+    ]
+  },
+  {
+    "source_id": "29.5",
+    "topic": "Distillation, distributed training và inference engine ở mức định hướng học tiếp.",
+    "days": [
+      148
+    ]
+  },
+  {
+    "source_id": "30.1",
+    "topic": "Chốt yêu cầu, dữ liệu, metric, giới hạn tài nguyên và tiêu chí nghiệm thu.",
+    "days": [
+      149
+    ]
+  },
+  {
+    "source_id": "30.2",
+    "topic": "Hoàn thiện ba mốc dự án dữ liệu, ML vận hành và ứng dụng RAG.",
+    "days": [
+      60,
+      120,
+      145
+    ]
+  },
+  {
+    "source_id": "30.3",
+    "topic": "Tạo README, sơ đồ, data dictionary, model card và runbook.",
+    "days": [
+      149
+    ]
+  },
+  {
+    "source_id": "30.4",
+    "topic": "Demo khởi động sạch, lỗi có chủ ý, phục hồi và rollback.",
+    "days": [
+      150
+    ]
+  },
+  {
+    "source_id": "30.5",
+    "topic": "Ôn SQL, PySpark, ML, MLOps, API, RAG và phỏng vấn thiết kế hệ thống.",
+    "days": [
+      150
+    ]
+  }
+]

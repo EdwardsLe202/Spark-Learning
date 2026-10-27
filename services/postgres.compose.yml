@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16.8
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      POSTGRES_DB: course
+      POSTGRES_USER: course
+      POSTGRES_PASSWORD: ${COURSE_DB_PASSWORD:?Set COURSE_DB_PASSWORD in terminal}
+    volumes:
+      - ./postgres-init.sql:/docker-entrypoint-initdb.d/001-source.sql:ro
+      - course_pg_data:/var/lib/postgresql/data
+volumes:
+  course_pg_data:

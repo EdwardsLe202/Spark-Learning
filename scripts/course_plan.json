@@ -1,0 +1,3240 @@
+[
+  {
+    "day": 1,
+    "title": "Đọc một bảng và hiểu Spark dùng để làm gì",
+    "goal": "Nhìn bảng ba đơn hàng, cộng đúng số tiền và nói được vai trò cơ bản của Spark.",
+    "prerequisite": null,
+    "new_terms": [
+      [
+        "Row",
+        "dòng dữ liệu"
+      ],
+      [
+        "Column",
+        "cột dữ liệu"
+      ],
+      [
+        "Apache Spark",
+        "bộ máy xử lý dữ liệu"
+      ]
+    ],
+    "completion": "Tự tính được 350000 và 300000, giải thích được một dòng là một đơn; không cần chạy code."
+  },
+  {
+    "day": 2,
+    "title": "Làm cùng bài toán bằng Python quen thuộc",
+    "goal": "Lọc đơn và tính tổng bằng list/dict trước khi chuyển sang Spark.",
+    "prerequisite": 1,
+    "new_terms": [
+      [
+        "Record",
+        "một bản ghi"
+      ],
+      [
+        "Filter",
+        "lọc các dòng theo điều kiện"
+      ]
+    ],
+    "completion": "Tự lọc C002 được 50000 và thêm O004 tính được tổng 420000 bằng Python."
+  },
+  {
+    "day": 3,
+    "title": "Cài đúng môi trường trước khi viết Spark",
+    "goal": "Có Python 3.11, Java 17, PySpark 3.5.7 trong môi trường của repo.",
+    "prerequisite": 2,
+    "new_terms": [
+      [
+        "Terminal",
+        "cửa sổ chạy lệnh"
+      ],
+      [
+        "Virtual environment",
+        "môi trường Python riêng"
+      ],
+      [
+        "Dependency",
+        "thư viện chương trình cần"
+      ]
+    ],
+    "completion": "Chạy lại ở terminal mới vẫn hiện đúng ba phiên bản, không cần cài mọi công cụ trong bản tham khảo."
+  },
+  {
+    "day": 4,
+    "title": "Tạo bảng Spark đầu tiên",
+    "goal": "Tạo DataFrame ba dòng, hiển thị bảng và đếm dòng.",
+    "prerequisite": 3,
+    "new_terms": [
+      [
+        "PySpark",
+        "giao diện Python của Spark"
+      ],
+      [
+        "SparkSession",
+        "phiên làm việc với Spark"
+      ],
+      [
+        "DataFrame",
+        "bảng dữ liệu có cấu trúc"
+      ]
+    ],
+    "completion": "Tự thêm đơn được 4 dòng, biết phân biệt phiên làm việc và bảng."
+  },
+  {
+    "day": 5,
+    "title": "Tên cột và kiểu dữ liệu",
+    "goal": "Đọc printSchema và hiểu vì sao số tiền cần kiểu số.",
+    "prerequisite": 4,
+    "new_terms": [
+      [
+        "Schema",
+        "lược đồ tên cột và kiểu"
+      ],
+      [
+        "String",
+        "kiểu chuỗi văn bản"
+      ],
+      [
+        "Long",
+        "kiểu số nguyên 64 bit"
+      ]
+    ],
+    "completion": "Tự thêm cột status, đọc được schema và biết sửa một lỗi sai kiểu đơn giản."
+  },
+  {
+    "day": 6,
+    "title": "Đọc file CSV tám đơn hàng",
+    "goal": "Đọc một CSV thật, kiểm tra header, số dòng và schema.",
+    "prerequisite": 5,
+    "new_terms": [
+      [
+        "CSV — Comma-Separated Values",
+        "tệp văn bản có các trường phân cách bằng dấu phẩy"
+      ],
+      [
+        "Header",
+        "dòng tên cột"
+      ],
+      [
+        "Path",
+        "đường dẫn tệp"
+      ]
+    ],
+    "completion": "Đọc được CSV đúng 8 dòng, tìm thấy O004, biết đâu là đường dẫn và đâu là tên cột."
+  },
+  {
+    "day": 7,
+    "title": "Chọn cột và đặt tên cho kết quả",
+    "goal": "Dùng select và alias để tạo bảng chỉ chứa thông tin cần xem.",
+    "prerequisite": 6,
+    "new_terms": [
+      [
+        "Select",
+        "chọn cột"
+      ],
+      [
+        "Alias",
+        "tên thay thế trong kết quả"
+      ]
+    ],
+    "completion": "Tự chọn ba cột, đổi tên tiền và xác nhận số dòng không đổi."
+  },
+  {
+    "day": 8,
+    "title": "Lọc các đơn cần tính",
+    "goal": "Dùng filter với một hoặc hai điều kiện và kiểm tra các giá trị biên.",
+    "prerequisite": 7,
+    "new_terms": [
+      [
+        "Condition",
+        "điều kiện giữ dòng"
+      ],
+      [
+        "Filter",
+        "lọc dòng"
+      ]
+    ],
+    "completion": "Tự viết hai điều kiện đúng ngoặc và giải thích được việc O005 được giữ hoặc bị loại."
+  },
+  {
+    "day": 9,
+    "title": "Tạo cột mới bằng withColumn",
+    "goal": "Tạo tiền theo nghìn đồng và hiểu biểu thức được áp dụng cho mọi dòng.",
+    "prerequisite": 8,
+    "new_terms": [
+      [
+        "Column expression",
+        "biểu thức tính trên cột"
+      ],
+      [
+        "withColumn",
+        "tạo hoặc thay cột trong bảng kết quả"
+      ]
+    ],
+    "completion": "Tự thêm một cột bằng phép toán, giữ được amount gốc và kiểm tra hai dòng tính tay."
+  },
+  {
+    "day": 10,
+    "title": "Tổng hợp tiền theo từng khách",
+    "goal": "Dùng groupBy và agg để tạo một dòng kết quả cho mỗi khách.",
+    "prerequisite": 9,
+    "new_terms": [
+      [
+        "Group",
+        "nhóm theo khóa"
+      ],
+      [
+        "Aggregation",
+        "tổng hợp nhiều dòng"
+      ],
+      [
+        "Alias",
+        "tên thay thế trong kết quả"
+      ]
+    ],
+    "completion": "Tự groupBy status được hai nhóm với số đơn và tổng tiền đúng."
+  },
+  {
+    "day": 11,
+    "title": "Giá trị thiếu và cách lọc NULL",
+    "goal": "Phân biệt thiếu tiền với tiền bằng 0; dùng isNull và fillna có lý do.",
+    "prerequisite": 10,
+    "new_terms": [
+      [
+        "NULL",
+        "giá trị thiếu hoặc chưa biết"
+      ],
+      [
+        "isNull",
+        "kiểm tra giá trị thiếu"
+      ],
+      [
+        "fillna",
+        "điền giá trị thiếu theo quy tắc"
+      ]
+    ],
+    "completion": "Tách đúng một dòng thiếu, giữ C=0 và giải thích được lý do không điền 0 bừa bãi."
+  },
+  {
+    "day": 12,
+    "title": "Nhận diện dòng trùng",
+    "goal": "Dùng distinct/dropDuplicates và hiểu cần định nghĩa trùng theo gì.",
+    "prerequisite": 11,
+    "new_terms": [
+      [
+        "Duplicate",
+        "bản ghi trùng theo quy tắc"
+      ],
+      [
+        "Distinct",
+        "giữ các dòng khác nhau"
+      ],
+      [
+        "Key",
+        "khóa nhận diện bản ghi"
+      ]
+    ],
+    "completion": "Loại đúng bản lặp hoàn toàn và nhận ra trường hợp cần quy tắc chọn phiên bản."
+  },
+  {
+    "day": 13,
+    "title": "Đọc số tiền sai kiểu và ghi lý do lỗi",
+    "goal": "Cast chuỗi sang số và tách các giá trị không parse được hoặc âm.",
+    "prerequisite": 12,
+    "new_terms": [
+      [
+        "Cast",
+        "chuyển kiểu dữ liệu"
+      ],
+      [
+        "Parse",
+        "diễn giải văn bản thành kiểu mong muốn"
+      ],
+      [
+        "Validation",
+        "kiểm tra dữ liệu theo quy tắc"
+      ]
+    ],
+    "completion": "Tách được sạch/lỗi đúng số lượng và không đồng nhất 0 với NULL."
+  },
+  {
+    "day": 14,
+    "title": "Ôn tập lần một bằng báo cáo đơn hàng",
+    "goal": "Tự kết hợp đọc, lọc, tổng hợp và kiểm tra số liệu mà không thêm API mới.",
+    "prerequisite": 13,
+    "new_terms": [
+      [
+        "Reconciliation",
+        "đối soát các số liệu liên quan"
+      ]
+    ],
+    "completion": "Tự dựng được báo cáo và chứng minh một lỗi bỏ lọc bị kiểm tra phát hiện."
+  },
+  {
+    "day": 15,
+    "title": "Ngày tháng và khoảng thời gian",
+    "goal": "Đổi chuỗi ngày sang date và lọc một khoảng có biên rõ ràng.",
+    "prerequisite": 14,
+    "new_terms": [
+      [
+        "Date",
+        "kiểu ngày lịch"
+      ],
+      [
+        "Inclusive / Exclusive",
+        "bao gồm / loại trừ mốc biên"
+      ]
+    ],
+    "completion": "Lọc đúng ba đơn ngày 5–6 và tổng 350000, giải thích được biên loại ngày 7."
+  },
+  {
+    "day": 16,
+    "title": "Lưu và đọc lại kết quả Parquet",
+    "goal": "Ghi một bảng kết quả vào đích thử riêng và đọc lại đúng số dòng.",
+    "prerequisite": 15,
+    "new_terms": [
+      [
+        "Parquet",
+        "định dạng lưu dữ liệu theo cột"
+      ],
+      [
+        "Overwrite",
+        "ghi thay thế dữ liệu ở đích"
+      ]
+    ],
+    "completion": "Ghi/đọc lại 7 đơn, chạy hai lần vẫn 7, nguồn không bị sửa."
+  },
+  {
+    "day": 17,
+    "title": "Viết lại phép tính bằng Spark SQL",
+    "goal": "Tạo tên bảng tạm và đối chiếu SQL với DataFrame API.",
+    "prerequisite": 16,
+    "new_terms": [
+      [
+        "Temporary view",
+        "bảng nhìn tạm trong phiên"
+      ],
+      [
+        "Spark SQL",
+        "giao diện truy vấn SQL của Spark"
+      ]
+    ],
+    "completion": "Viết được cùng một báo cáo bằng SQL/API với hai dòng kết quả khớp nhau."
+  },
+  {
+    "day": 18,
+    "title": "Ghép đơn hàng với thông tin khách",
+    "goal": "Dùng inner join để thêm tên khách và vùng vào mỗi đơn.",
+    "prerequisite": 17,
+    "new_terms": [
+      [
+        "Join",
+        "ghép bảng theo điều kiện"
+      ],
+      [
+        "Inner join",
+        "chỉ giữ các khóa khớp hai phía"
+      ]
+    ],
+    "completion": "Ghép giữ đúng 8 đơn, tính được ba tổng vùng và giải thích được C005."
+  },
+  {
+    "day": 19,
+    "title": "Giữ cả khách chưa có đơn",
+    "goal": "Phân biệt left join và left anti join bằng khách C005.",
+    "prerequisite": 18,
+    "new_terms": [
+      [
+        "Left join",
+        "ghép giữ mọi dòng phía trái"
+      ],
+      [
+        "Left anti join",
+        "giữ dòng trái không có khóa khớp"
+      ]
+    ],
+    "completion": "Tạo báo cáo 5 khách có C005=0 và giải thích được khác biệt inner/left/anti."
+  },
+  {
+    "day": 20,
+    "title": "Phát hiện join làm nhân tiền",
+    "goal": "Kiểm tra khóa và tổng tiền trước sau ghép; dừng khi bảng khách trùng mã.",
+    "prerequisite": 19,
+    "new_terms": [
+      [
+        "Unique key",
+        "khóa có giá trị duy nhất"
+      ],
+      [
+        "Cardinality",
+        "quan hệ số lượng giữa các khóa"
+      ]
+    ],
+    "completion": "Chặn được bảng khách trùng và giải thích được vì sao tổng sai tăng đúng 700000."
+  },
+  {
+    "day": 21,
+    "title": "Chọn đơn mới nhất cho mỗi khách",
+    "goal": "Dùng window và row_number để chọn một dòng theo thứ tự xác định.",
+    "prerequisite": 20,
+    "new_terms": [
+      [
+        "Window function",
+        "hàm tính trên nhóm dòng liên quan"
+      ],
+      [
+        "row_number",
+        "số thứ tự duy nhất trong nhóm"
+      ]
+    ],
+    "completion": "Tự chọn được đơn đầu và cuối, giải thích đúng bước nào giảm số dòng."
+  },
+  {
+    "day": 22,
+    "title": "Xem đơn trước và tổng tích lũy",
+    "goal": "Dùng lag và cửa sổ theo dòng để tính lịch sử có thứ tự.",
+    "prerequisite": 21,
+    "new_terms": [
+      [
+        "Lag",
+        "lấy giá trị của dòng trước"
+      ],
+      [
+        "Running total",
+        "tổng tích lũy đến dòng hiện tại"
+      ],
+      [
+        "Window frame",
+        "phạm vi dòng đưa vào phép tính"
+      ]
+    ],
+    "completion": "Tính đúng hai đơn C002 và giải thích được nhóm, thứ tự, phạm vi cộng."
+  },
+  {
+    "day": 23,
+    "title": "Ghép các bước thành một lần làm sạch",
+    "goal": "Làm sạch file lỗi nhỏ, đối soát từng bước và giữ nguồn để giải thích.",
+    "prerequisite": 22,
+    "new_terms": [
+      [
+        "Pipeline",
+        "chuỗi bước xử lý có đầu vào và đầu ra"
+      ],
+      [
+        "Quarantine",
+        "vùng giữ bản ghi lỗi để điều tra"
+      ]
+    ],
+    "completion": "Làm được chuỗi có số dòng đối soát đúng, lưu sạch/lỗi riêng và đọc lại 390000."
+  },
+  {
+    "day": 24,
+    "title": "Xử lý riêng một ngày dữ liệu",
+    "goal": "Viết hàm nhận ngày và ghi đúng đầu ra của ngày đó.",
+    "prerequisite": 23,
+    "new_terms": [
+      [
+        "Batch processing",
+        "xử lý một tập dữ liệu hữu hạn theo đợt"
+      ],
+      [
+        "Data interval",
+        "khoảng dữ liệu được một lần chạy xử lý"
+      ]
+    ],
+    "completion": "Chạy hai ngày được 4 dòng/520000, đích ngày cũ còn và ngày thiếu bị báo rõ."
+  },
+  {
+    "day": 25,
+    "title": "Chạy lại không làm nhân dữ liệu",
+    "goal": "Chứng minh cùng đầu vào chạy hai lần không thêm bản ghi và cập nhật đúng ngày khi nguồn đổi.",
+    "prerequisite": 24,
+    "new_terms": [
+      [
+        "Idempotency",
+        "tính lũy đẳng khi chạy lại"
+      ],
+      [
+        "Backfill",
+        "xử lý bù dữ liệu quá khứ"
+      ]
+    ],
+    "completion": "Chứng minh được chạy lại không nhân dòng và thay đúng ngày khi thêm một đơn đến muộn."
+  },
+  {
+    "day": 26,
+    "title": "Vì sao Spark chưa tính ngay?",
+    "goal": "Liên hệ transformation/action với các lệnh đã dùng và đọc plan cơ bản.",
+    "prerequisite": 25,
+    "new_terms": [
+      [
+        "Transformation",
+        "phép tạo kế hoạch biến đổi"
+      ],
+      [
+        "Action",
+        "thao tác yêu cầu kết quả"
+      ],
+      [
+        "Lazy evaluation",
+        "thực thi trì hoãn"
+      ]
+    ],
+    "completion": "Gắn được ba thuật ngữ với code đã biết và tìm được lọc/tổng hợp trong plan."
+  },
+  {
+    "day": 27,
+    "title": "Partition và chi phí shuffle",
+    "goal": "Đổi cách chia công việc nhưng giữ nguyên kết quả của bảng.",
+    "prerequisite": 26,
+    "new_terms": [
+      [
+        "Partition",
+        "phần dữ liệu để xử lý song song"
+      ],
+      [
+        "Shuffle",
+        "phân phối lại dữ liệu giữa các phần xử lý"
+      ],
+      [
+        "Repartition",
+        "chia lại dữ liệu thành các partition"
+      ]
+    ],
+    "completion": "Chứng minh đổi số partition vẫn giữ số đơn/tổng tiền và hiểu chi phí phân phối lại."
+  },
+  {
+    "day": 28,
+    "title": "Đo một thay đổi hiệu năng đơn giản",
+    "goal": "Đo phép tính có action, thử cache khi dùng lại và không hứa tăng tốc trên bảng nhỏ.",
+    "prerequisite": 27,
+    "new_terms": [
+      [
+        "Baseline",
+        "mốc so sánh ban đầu"
+      ],
+      [
+        "Cache",
+        "giữ kết quả để tái dùng"
+      ],
+      [
+        "Warm-up",
+        "lượt khởi động trước khi đo"
+      ]
+    ],
+    "completion": "Có bảng ba lần đo mỗi nhánh, cùng kết quả và nêu đúng giới hạn của thí nghiệm."
+  },
+  {
+    "day": 29,
+    "title": "Dự án nhỏ báo cáo doanh thu",
+    "goal": "Tự ghép các phép đã học thành một chương trình đọc, kiểm tra, báo cáo và lưu.",
+    "prerequisite": 28,
+    "new_terms": [
+      [
+        "Deliverable",
+        "sản phẩm bàn giao có thể kiểm tra"
+      ]
+    ],
+    "completion": "Hoàn thành một dự án tự chạy được, lưu/đọc lại đúng, bắt lỗi khóa và không tăng dòng khi chạy lại."
+  },
+  {
+    "day": 30,
+    "title": "Tự làm lại và quyết định học tiếp",
+    "goal": "Tự giải ba bài tổng hợp và xác định lỗ hổng trước khi sang Machine Learning.",
+    "prerequisite": 29,
+    "new_terms": [
+      [
+        "Self-assessment",
+        "tự đánh giá bằng hành vi và kết quả"
+      ]
+    ],
+    "completion": "Tự làm A/B/C đúng và giải thích được; có danh sách phần yếu cần ôn thay vì chỉ đánh dấu đủ 30 thư mục."
+  },
+  {
+    "day": 31,
+    "title": "Driver và executor qua báo cáo đã biết",
+    "goal": "Master local[2], tổng 1400000. Sơ đồ phân biệt tiến trình và máy.",
+    "prerequisite": 30,
+    "new_terms": [
+      [
+        "Driver",
+        "tiến trình điều phối"
+      ],
+      [
+        "Executor",
+        "tiến trình thực thi"
+      ]
+    ],
+    "completion": "Master local[2], tổng 1400000. Sơ đồ phân biệt tiến trình và máy.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 3
+  },
+  {
+    "day": 32,
+    "title": "Theo dõi job stage task trong Spark UI",
+    "goal": "Ba nhóm đều count=40; có ghi chép thực tế từ UI, không yêu cầu số stage cố định.",
+    "prerequisite": 31,
+    "new_terms": [
+      [
+        "Job",
+        "công việc thực thi"
+      ],
+      [
+        "Stage",
+        "giai đoạn thực thi"
+      ],
+      [
+        "Task",
+        "tác vụ xử lý một partition"
+      ]
+    ],
+    "completion": "Ba nhóm đều count=40; có ghi chép thực tế từ UI, không yêu cầu số stage cố định.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 3
+  },
+  {
+    "day": 33,
+    "title": "Logical plan và physical plan",
+    "goal": "Tổng completed vẫn 1100000; có hai cách viết và giải thích plan.",
+    "prerequisite": 32,
+    "new_terms": [
+      [
+        "Logical plan",
+        "kế hoạch logic"
+      ],
+      [
+        "Physical plan",
+        "kế hoạch vật lý"
+      ],
+      [
+        "Catalyst",
+        "bộ tối ưu truy vấn Spark SQL"
+      ]
+    ],
+    "completion": "Tổng completed vẫn 1100000; có hai cách viết và giải thích plan.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 9
+  },
+  {
+    "day": 34,
+    "title": "RDD với word count nhỏ",
+    "goal": "Ban đầu ml=1, spark=2, sql=2; sau thêm câu sql sql thì sql=4.",
+    "prerequisite": 33,
+    "new_terms": [
+      [
+        "RDD — Resilient Distributed Dataset",
+        "tập dữ liệu phân tán có thể tính lại"
+      ],
+      [
+        "reduceByKey",
+        "tổng hợp giá trị theo khóa"
+      ]
+    ],
+    "completion": "Ban đầu ml=1, spark=2, sql=2; sau thêm câu sql sql thì sql=4.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 8
+  },
+  {
+    "day": 35,
+    "title": "Lineage broadcast và task retry",
+    "goal": "Có Hà Nội, Đà Nẵng, chưa biết; giải thích được lineage không thay backup nguồn.",
+    "prerequisite": 34,
+    "new_terms": [
+      [
+        "Lineage",
+        "quan hệ nguồn gốc phép tính"
+      ],
+      [
+        "Broadcast variable",
+        "biến chỉ đọc phân phối tới task"
+      ],
+      [
+        "Side effect",
+        "tác động ra hệ thống ngoài"
+      ]
+    ],
+    "completion": "Có Hà Nội, Đà Nẵng, chưa biết; giải thích được lineage không thay backup nguồn.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 8
+  },
+  {
+    "day": 36,
+    "title": "Repartition coalesce và file đầu ra",
+    "goal": "Mỗi đích 8 dòng và tổng 1400000; có ghi số file quan sát.",
+    "prerequisite": 35,
+    "new_terms": [
+      [
+        "Coalesce",
+        "gộp giảm partition"
+      ],
+      [
+        "Small files",
+        "nhiều tệp nhỏ"
+      ]
+    ],
+    "completion": "Mỗi đích 8 dòng và tổng 1400000; có ghi số file quan sát.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 8
+  },
+  {
+    "day": 37,
+    "title": "Nhận diện data skew spill và OOM",
+    "goal": "Key 0=9100; key 1–9 mỗi key=100; không cần gây OOM.",
+    "prerequisite": 36,
+    "new_terms": [
+      [
+        "Data skew",
+        "dữ liệu lệch khóa"
+      ],
+      [
+        "Spill",
+        "tràn dữ liệu tạm ra đĩa"
+      ],
+      [
+        "OOM — Out of memory",
+        "hết bộ nhớ"
+      ]
+    ],
+    "completion": "Key 0=9100; key 1–9 mỗi key=100; không cần gây OOM.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 9
+  },
+  {
+    "day": 38,
+    "title": "Broadcast join và sort merge join",
+    "goal": "Cùng 8 đơn/1400000; ghi plan thực tế thay vì yêu cầu một loại join cố định.",
+    "prerequisite": 37,
+    "new_terms": [
+      [
+        "Broadcast join",
+        "ghép bằng phát bảng nhỏ"
+      ],
+      [
+        "Sort merge join",
+        "ghép bằng sắp xếp và trộn"
+      ]
+    ],
+    "completion": "Cùng 8 đơn/1400000; ghi plan thực tế thay vì yêu cầu một loại join cố định.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 9
+  },
+  {
+    "day": 39,
+    "title": "AQE và đo kế hoạch sau thực thi",
+    "goal": "Hai nhánh cùng tổng 1400000, cấu hình được khôi phục.",
+    "prerequisite": 38,
+    "new_terms": [
+      [
+        "AQE — Adaptive Query Execution",
+        "điều chỉnh kế hoạch khi chạy"
+      ]
+    ],
+    "completion": "Hai nhánh cùng tổng 1400000, cấu hình được khôi phục.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 9
+  },
+  {
+    "day": 40,
+    "title": "Built-in Python UDF và pandas UDF",
+    "goal": "SPARK, NULL, SQL giống giữa hai nhánh; không kết luận tốc độ từ ba dòng.",
+    "prerequisite": 39,
+    "new_terms": [
+      [
+        "Built-in function",
+        "hàm Spark có sẵn"
+      ],
+      [
+        "UDF — User Defined Function",
+        "hàm do người dùng định nghĩa"
+      ],
+      [
+        "Arrow",
+        "định dạng trao đổi dữ liệu theo cột"
+      ]
+    ],
+    "completion": "SPARK, NULL, SQL giống giữa hai nhánh; không kết luận tốc độ từ ba dòng.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 9
+  },
+  {
+    "day": 41,
+    "title": "JSON struct array map và explode",
+    "goal": "Ví dụ có hai dòng item a/b của C001; phân biệt mất dòng với dữ liệu nguồn bị xóa.",
+    "prerequisite": 40,
+    "new_terms": [
+      [
+        "Struct",
+        "cấu trúc có trường"
+      ],
+      [
+        "Array",
+        "mảng phần tử"
+      ],
+      [
+        "Explode",
+        "tách phần tử mảng thành dòng"
+      ]
+    ],
+    "completion": "Ví dụ có hai dòng item a/b của C001; phân biệt mất dòng với dữ liệu nguồn bị xóa.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 5
+  },
+  {
+    "day": 42,
+    "title": "Partition pruning predicate pushdown và catalog",
+    "goal": "Ngày 2025-01-03 có 2 đơn; chỉ nhận xét cơ chế xuất hiện trong plan.",
+    "prerequisite": 41,
+    "new_terms": [
+      [
+        "Partition pruning",
+        "bỏ qua thư mục phân vùng"
+      ],
+      [
+        "Predicate pushdown",
+        "đẩy điều kiện xuống bộ đọc"
+      ],
+      [
+        "Catalog",
+        "danh mục quản lý bảng"
+      ]
+    ],
+    "completion": "Ngày 2025-01-03 có 2 đơn; chỉ nhận xét cơ chế xuất hiện trong plan.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 7
+  },
+  {
+    "day": 43,
+    "title": "JDBC object storage và quyền truy cập",
+    "goal": "SQLite mẫu trả O001/100000. JDBC chỉ đánh dấu xong sau khi đọc được database thật, không chỉ in cấu hình.",
+    "prerequisite": 42,
+    "new_terms": [
+      [
+        "JDBC — Java Database Connectivity",
+        "giao diện kết nối database"
+      ],
+      [
+        "Object storage",
+        "kho lưu đối tượng"
+      ],
+      [
+        "Secret",
+        "thông tin bí mật cần bảo vệ"
+      ]
+    ],
+    "completion": "SQLite mẫu trả O001/100000. JDBC chỉ đánh dấu xong sau khi đọc được database thật, không chỉ in cấu hình.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 7
+  },
+  {
+    "day": 44,
+    "title": "Delta Lake transaction và time travel",
+    "goal": "Hiện tại 7 dòng, version trước delete 8 dòng; có history thực tế.",
+    "prerequisite": 43,
+    "new_terms": [
+      [
+        "ACID transaction",
+        "giao dịch bảo đảm tính nhất quán"
+      ],
+      [
+        "Time travel",
+        "đọc phiên bản dữ liệu cũ"
+      ]
+    ],
+    "completion": "Hiện tại 7 dòng, version trước delete 8 dòng; có history thực tế.",
+    "environment": "delta",
+    "requirements": "requirements-delta.txt",
+    "source_part": 7
+  },
+  {
+    "day": 45,
+    "title": "Ôn Spark nâng cao và báo cáo hiệu năng",
+    "goal": "Mọi trial tổng 1100000; có báo cáo trước/sau bằng số thật.",
+    "prerequisite": 44,
+    "new_terms": [
+      [
+        "Benchmark",
+        "thử nghiệm đo có điều kiện"
+      ],
+      [
+        "Equivalence",
+        "tính tương đương kết quả"
+      ]
+    ],
+    "completion": "Mọi trial tổng 1100000; có báo cáo trước/sau bằng số thật.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 9
+  },
+  {
+    "day": 46,
+    "title": "Data interval và hai loại thời gian",
+    "goal": "Tiny ngày 20 chỉ có T002; biên end loại trừ.",
+    "prerequisite": 45,
+    "new_terms": [
+      [
+        "Event time",
+        "thời gian sự kiện xảy ra"
+      ],
+      [
+        "Ingestion time",
+        "thời gian dữ liệu được nhận"
+      ]
+    ],
+    "completion": "Tiny ngày 20 chỉ có T002; biên end loại trừ.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 47,
+    "title": "Dedup và chọn phiên bản đã biết tại cutoff",
+    "goal": "Cutoff ngày 2 thấy amount=100; ngày 4 thấy 200.",
+    "prerequisite": 46,
+    "new_terms": [
+      [
+        "Point-in-time selection",
+        "chọn phiên bản đã có ở mốc chốt"
+      ],
+      [
+        "Tie-breaker",
+        "tiêu chí phụ để phân thứ tự"
+      ]
+    ],
+    "completion": "Cutoff ngày 2 thấy amount=100; ngày 4 thấy 200.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 48,
+    "title": "Upsert bằng Delta merge",
+    "goal": "Ba khóa E1/E2/E3, tổng 240; có kiểm tra khóa nguồn.",
+    "prerequisite": 47,
+    "new_terms": [
+      [
+        "Upsert",
+        "cập nhật nếu có và thêm nếu chưa"
+      ],
+      [
+        "Merge",
+        "ghép thay đổi vào bảng theo khóa"
+      ]
+    ],
+    "completion": "Ba khóa E1/E2/E3, tổng 240; có kiểm tra khóa nguồn.",
+    "environment": "delta",
+    "requirements": "requirements-delta.txt",
+    "source_part": 10
+  },
+  {
+    "day": 49,
+    "title": "Backfill và thay đổi schema có kiểm soát",
+    "goal": "E1 channel=NULL, E2=app; chỉ chấp nhận thay đổi đã có policy.",
+    "prerequisite": 48,
+    "new_terms": [
+      [
+        "Schema evolution",
+        "thay đổi lược đồ"
+      ],
+      [
+        "Compatibility",
+        "tính tương thích"
+      ]
+    ],
+    "completion": "E1 channel=NULL, E2=app; chỉ chấp nhận thay đổi đã có policy.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 50,
+    "title": "Structured Streaming từ file hữu hạn",
+    "goal": "2 dòng, tổng value=3; file input không bị sửa sau khi đã xử lý.",
+    "prerequisite": 49,
+    "new_terms": [
+      [
+        "Structured Streaming",
+        "xử lý luồng trên bảng"
+      ],
+      [
+        "Source / Sink",
+        "nguồn / đích"
+      ],
+      [
+        "Micro-batch",
+        "lô nhỏ liên tiếp"
+      ]
+    ],
+    "completion": "2 dòng, tổng value=3; file input không bị sửa sau khi đã xử lý.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 51,
+    "title": "Dừng và phục hồi bằng checkpoint",
+    "goal": "Cuối cùng vẫn 2 dòng a/b, không tăng ở lượt không có file mới.",
+    "prerequisite": 50,
+    "new_terms": [
+      [
+        "Checkpoint",
+        "trạng thái phục hồi"
+      ],
+      [
+        "Offset",
+        "vị trí tiến độ của nguồn"
+      ]
+    ],
+    "completion": "Cuối cùng vẫn 2 dòng a/b, không tăng ở lượt không có file mới.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 52,
+    "title": "Event time khác processing time trong stream",
+    "goal": "Event time vẫn năm 2025; processing time theo lần chạy thực tế, không có số thời gian cố định.",
+    "prerequisite": 51,
+    "new_terms": [
+      [
+        "Processing time",
+        "thời gian hệ thống xử lý"
+      ],
+      [
+        "Late data",
+        "dữ liệu đến muộn"
+      ]
+    ],
+    "completion": "Event time vẫn năm 2025; processing time theo lần chạy thực tế, không có số thời gian cố định.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 53,
+    "title": "Watermark và tiến độ thời gian sự kiện",
+    "goal": "Có progress eventTime và giải thích thứ tự batch; không áp một số dòng sink cố định ở lượt đầu.",
+    "prerequisite": 52,
+    "new_terms": [
+      [
+        "Watermark",
+        "mốc tiến độ theo thời gian sự kiện"
+      ],
+      [
+        "State",
+        "trạng thái giữ giữa các batch"
+      ]
+    ],
+    "completion": "Có progress eventTime và giải thích thứ tự batch; không áp một số dòng sink cố định ở lượt đầu.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 54,
+    "title": "Cửa sổ streaming và output mode",
+    "goal": "Hai cửa sổ có tổng 3 và 3; stream chỉ nghiệm thu sau khi đã quan sát đóng cửa sổ.",
+    "prerequisite": 53,
+    "new_terms": [
+      [
+        "Append / Update / Complete",
+        "ghi dòng hoàn tất / cập nhật / toàn kết quả"
+      ]
+    ],
+    "completion": "Hai cửa sổ có tổng 3 và 3; stream chỉ nghiệm thu sau khi đã quan sát đóng cửa sổ.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 55,
+    "title": "ForeachBatch và chống lặp tác động ghi",
+    "goal": "Có đầu ra batch Parquet; giải thích được giới hạn bảo đảm source/sink/side effect.",
+    "prerequisite": 54,
+    "new_terms": [
+      [
+        "foreachBatch",
+        "xử lý từng micro-batch bằng hàm"
+      ],
+      [
+        "Batch ID",
+        "mã lô trong một query"
+      ]
+    ],
+    "completion": "Có đầu ra batch Parquet; giải thích được giới hạn bảo đảm source/sink/side effect.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 10
+  },
+  {
+    "day": 56,
+    "title": "Định nghĩa entity cutoff và hai cửa sổ",
+    "goal": "Lịch sử T001/T002/T003, tổng 350000; C001=300000, C002=50000.",
+    "prerequisite": 55,
+    "new_terms": [
+      [
+        "Entity",
+        "đối tượng dự đoán"
+      ],
+      [
+        "Cutoff",
+        "mốc chốt thông tin"
+      ],
+      [
+        "Label window",
+        "cửa sổ tương lai xác định nhãn"
+      ]
+    ],
+    "completion": "Lịch sử T001/T002/T003, tổng 350000; C001=300000, C002=50000.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 11
+  },
+  {
+    "day": 57,
+    "title": "Tạo feature 30 ngày bằng Spark",
+    "goal": "120 dòng trên nguồn đầy đủ. Tiny: C001=2/300000/12 ngày; C002=1/50000/17; C003=0/0/NULL.",
+    "prerequisite": 56,
+    "new_terms": [
+      [
+        "Feature engineering",
+        "tạo đặc trưng từ dữ liệu"
+      ],
+      [
+        "Recency",
+        "số ngày từ lần hoạt động gần nhất"
+      ]
+    ],
+    "completion": "120 dòng trên nguồn đầy đủ. Tiny: C001=2/300000/12 ngày; C002=1/50000/17; C003=0/0/NULL.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 11
+  },
+  {
+    "day": 58,
+    "title": "Tạo nhãn churn khi đủ quan sát",
+    "goal": "Cutoff 2025-07-15 bị từ chối; nhãn tiny đúng 0/1/1.",
+    "prerequisite": 57,
+    "new_terms": [
+      [
+        "Churn",
+        "không hoạt động theo định nghĩa"
+      ],
+      [
+        "Censoring",
+        "chưa quan sát đủ kết quả"
+      ]
+    ],
+    "completion": "Cutoff 2025-07-15 bị từ chối; nhãn tiny đúng 0/1/1.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 11
+  },
+  {
+    "day": 59,
+    "title": "Chia tập thời gian và test chống leakage",
+    "goal": "Three snapshot mỗi tập 120 dòng, ngày không lẫn; có test biên thời gian.",
+    "prerequisite": 58,
+    "new_terms": [
+      [
+        "Leakage",
+        "rò rỉ thông tin vào học máy"
+      ],
+      [
+        "Temporal split",
+        "chia tập theo thời gian"
+      ],
+      [
+        "Group split",
+        "chia theo nhóm đối tượng"
+      ]
+    ],
+    "completion": "Three snapshot mỗi tập 120 dòng, ngày không lẫn; có test biên thời gian.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 11
+  },
+  {
+    "day": 60,
+    "title": "Nghiệm thu dự án 1 dữ liệu và feature",
+    "goal": "Ba snapshot, tổng 360 dòng, khóa duy nhất; có bằng chứng tính đúng và phục hồi.",
+    "prerequisite": 59,
+    "new_terms": [
+      [
+        "Data lineage",
+        "nguồn gốc các bước tạo dữ liệu"
+      ],
+      [
+        "Acceptance test",
+        "kiểm tra nghiệm thu"
+      ]
+    ],
+    "completion": "Ba snapshot, tổng 360 dòng, khóa duy nhất; có bằng chứng tính đúng và phục hồi.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 11
+  },
+  {
+    "day": 61,
+    "title": "Từ bảng feature đến bài toán dự đoán",
+    "goal": "120 dòng train, feature không chứa customer_id/label; định nghĩa bài toán rõ.",
+    "prerequisite": 60,
+    "new_terms": [
+      [
+        "Feature",
+        "biến đầu vào"
+      ],
+      [
+        "Label / Target",
+        "nhãn mục tiêu"
+      ],
+      [
+        "Classification",
+        "phân loại"
+      ]
+    ],
+    "completion": "120 dòng train, feature không chứa customer_id/label; định nghĩa bài toán rõ.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 11
+  },
+  {
+    "day": 62,
+    "title": "Baseline trước khi dùng model phức tạp",
+    "goal": "Ví dụ tay accuracy=0.75, recall=0; không xem accuracy cao là đủ.",
+    "prerequisite": 61,
+    "new_terms": [
+      [
+        "Baseline",
+        "mốc dự đoán đơn giản"
+      ],
+      [
+        "Class imbalance",
+        "mất cân bằng lớp"
+      ]
+    ],
+    "completion": "Ví dụ tay accuracy=0.75, recall=0; không xem accuracy cao là đủ.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 13
+  },
+  {
+    "day": 63,
+    "title": "Confusion matrix precision recall",
+    "goal": "Ngưỡng 0.5: precision=0.5, recall=0.5; các ô đều 1.",
+    "prerequisite": 62,
+    "new_terms": [
+      [
+        "Confusion matrix",
+        "ma trận nhầm lẫn"
+      ],
+      [
+        "Precision",
+        "tỷ lệ đúng trong dự đoán dương"
+      ],
+      [
+        "Recall",
+        "tỷ lệ tìm được mẫu dương"
+      ]
+    ],
+    "completion": "Ngưỡng 0.5: precision=0.5, recall=0.5; các ô đều 1.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 13
+  },
+  {
+    "day": 64,
+    "title": "Xếp hạng bằng ROC AUC và PR AUC",
+    "goal": "ROC AUC=0.75, AP khoảng 0.8333; ghi đúng tên hai metric.",
+    "prerequisite": 63,
+    "new_terms": [
+      [
+        "ROC AUC",
+        "diện tích dưới đường ROC"
+      ],
+      [
+        "Average precision",
+        "trung bình precision theo thứ hạng"
+      ]
+    ],
+    "completion": "ROC AUC=0.75, AP khoảng 0.8333; ghi đúng tên hai metric.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 13
+  },
+  {
+    "day": 65,
+    "title": "Lắp pipeline scikit-learn",
+    "goal": "Có preprocess/classifier; score trong [0,1], không yêu cầu giá trị đẹp.",
+    "prerequisite": 64,
+    "new_terms": [
+      [
+        "Preprocessing",
+        "tiền xử lý"
+      ],
+      [
+        "Pipeline",
+        "chuỗi bước fit và transform"
+      ],
+      [
+        "ColumnTransformer",
+        "xử lý các nhóm cột"
+      ]
+    ],
+    "completion": "Có preprocess/classifier; score trong [0,1], không yêu cầu giá trị đẹp.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 14
+  },
+  {
+    "day": 66,
+    "title": "Fit preprocessing chỉ trên train",
+    "goal": "Thống kê train giữ nguyên; inference không huấn luyện lại.",
+    "prerequisite": 65,
+    "new_terms": [
+      [
+        "Fit / Transform",
+        "học quy tắc / áp dụng quy tắc"
+      ],
+      [
+        "Train-only statistics",
+        "thống kê chỉ học từ train"
+      ]
+    ],
+    "completion": "Thống kê train giữ nguyên; inference không huấn luyện lại.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 11
+  },
+  {
+    "day": 67,
+    "title": "Estimator và Transformer trong Spark ML",
+    "goal": "Có StringIndexer và StringIndexerModel, mapping không fit lại trên validation.",
+    "prerequisite": 66,
+    "new_terms": [
+      [
+        "Estimator",
+        "thành phần cần fit"
+      ],
+      [
+        "Transformer",
+        "thành phần transform bảng"
+      ],
+      [
+        "Model",
+        "kết quả đã fit"
+      ]
+    ],
+    "completion": "Có StringIndexer và StringIndexerModel, mapping không fit lại trên validation.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 12
+  },
+  {
+    "day": 68,
+    "title": "Imputer scaler và vector đặc trưng",
+    "goal": "Vector ba chiều có dữ liệu hợp lệ, preprocessing chỉ fit train.",
+    "prerequisite": 67,
+    "new_terms": [
+      [
+        "Imputer",
+        "bộ điền thiếu"
+      ],
+      [
+        "Scaling",
+        "chuẩn hóa thang đo"
+      ],
+      [
+        "VectorAssembler",
+        "bộ ghép cột thành vector"
+      ]
+    ],
+    "completion": "Vector ba chiều có dữ liệu hợp lệ, preprocessing chỉ fit train.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 12
+  },
+  {
+    "day": 69,
+    "title": "Category chưa gặp và one-hot encoding",
+    "goal": "Category mới được transform theo keep, không tự học lại mapping.",
+    "prerequisite": 68,
+    "new_terms": [
+      [
+        "Unseen category",
+        "giá trị nhóm chưa gặp"
+      ],
+      [
+        "One-hot encoding",
+        "mã hóa nhóm bằng vector chỉ báo"
+      ],
+      [
+        "Sparse vector",
+        "vector thưa"
+      ]
+    ],
+    "completion": "Category mới được transform theo keep, không tự học lại mapping.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 12
+  },
+  {
+    "day": 70,
+    "title": "Baseline Logistic Regression bằng Spark",
+    "goal": "120 prediction validation, không fit preprocessing trên validation.",
+    "prerequisite": 69,
+    "new_terms": [
+      [
+        "Logistic regression",
+        "hồi quy logistic cho phân loại"
+      ],
+      [
+        "Probability",
+        "xác suất model ước lượng"
+      ]
+    ],
+    "completion": "120 prediction validation, không fit preprocessing trên validation.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 12
+  },
+  {
+    "day": 71,
+    "title": "Chọn thuật toán theo loại bài toán",
+    "goal": "Có so sánh cùng split; phân biệt phân loại, hồi quy số và gom nhóm.",
+    "prerequisite": 70,
+    "new_terms": [
+      [
+        "Decision tree",
+        "cây quyết định"
+      ],
+      [
+        "Regression",
+        "dự đoán số"
+      ],
+      [
+        "Clustering",
+        "gom nhóm không có nhãn"
+      ]
+    ],
+    "completion": "Có so sánh cùng split; phân biệt phân loại, hồi quy số và gom nhóm.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 12
+  },
+  {
+    "day": 72,
+    "title": "Lưu và load toàn Spark PipelineModel",
+    "goal": "Có artifact đầy đủ, 120 dòng khi transform toàn snapshot, score tái lập trong tolerance.",
+    "prerequisite": 71,
+    "new_terms": [
+      [
+        "Persistence",
+        "lưu trạng thái để dùng lại"
+      ],
+      [
+        "Artifact",
+        "tệp hoặc thư mục đầu ra"
+      ]
+    ],
+    "completion": "Có artifact đầy đủ, 120 dòng khi transform toàn snapshot, score tái lập trong tolerance.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 12
+  },
+  {
+    "day": 73,
+    "title": "Threshold chi phí và calibration",
+    "goal": "Bảng ba ngưỡng có FP/FN/cost thật; chọn trên validation, không trên test.",
+    "prerequisite": 72,
+    "new_terms": [
+      [
+        "Threshold",
+        "ngưỡng quyết định"
+      ],
+      [
+        "Calibration",
+        "hiệu chỉnh độ phù hợp xác suất"
+      ]
+    ],
+    "completion": "Bảng ba ngưỡng có FP/FN/cost thật; chọn trên validation, không trên test.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 13
+  },
+  {
+    "day": 74,
+    "title": "Giới hạn số lần fit khi tuning",
+    "goal": "Grid ví dụ tay cần 24 fit trước lần fit cuối; bảng mẫu có hai cấu hình thật.",
+    "prerequisite": 73,
+    "new_terms": [
+      [
+        "Hyperparameter",
+        "siêu tham số"
+      ],
+      [
+        "Parameter grid",
+        "lưới cấu hình"
+      ]
+    ],
+    "completion": "Grid ví dụ tay cần 24 fit trước lần fit cuối; bảng mẫu có hai cấu hình thật.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 13
+  },
+  {
+    "day": 75,
+    "title": "Đánh giá theo nhiều fold thời gian",
+    "goal": "Có protocol không dùng test để lựa chọn; mọi fold chỉ fit thống kê từ train của fold.",
+    "prerequisite": 74,
+    "new_terms": [
+      [
+        "Temporal fold",
+        "cặp train và validation theo thời gian"
+      ],
+      [
+        "Gap",
+        "khoảng cách để tránh cửa sổ chồng"
+      ]
+    ],
+    "completion": "Có protocol không dùng test để lựa chọn; mọi fold chỉ fit thống kê từ train của fold.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 13
+  },
+  {
+    "day": 76,
+    "title": "Metric theo nhóm và độ bất định",
+    "goal": "Có bảng nhóm với n và positives, không lấy trung bình metric mù quáng.",
+    "prerequisite": 75,
+    "new_terms": [
+      [
+        "Slice evaluation",
+        "đánh giá theo nhóm"
+      ],
+      [
+        "Confidence interval",
+        "khoảng bất định ước lượng"
+      ]
+    ],
+    "completion": "Có bảng nhóm với n và positives, không lấy trung bình metric mù quáng.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 13
+  },
+  {
+    "day": 77,
+    "title": "Giới hạn trước khi toPandas",
+    "goal": "8 dòng mẫu về driver có kiểm soát; dữ liệu lớn bị chặn trước toPandas.",
+    "prerequisite": 76,
+    "new_terms": [
+      [
+        "Memory budget",
+        "ngân sách bộ nhớ"
+      ],
+      [
+        "Sampling",
+        "lấy mẫu có quy tắc"
+      ]
+    ],
+    "completion": "8 dòng mẫu về driver có kiểm soát; dữ liệu lớn bị chặn trước toPandas.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 14
+  },
+  {
+    "day": 78,
+    "title": "Artifact sklearn riêng cho API",
+    "goal": "Score trước/sau joblib.load tương đương; inference nhánh này không cần Spark.",
+    "prerequisite": 77,
+    "new_terms": [
+      [
+        "Online inference",
+        "dự đoán theo yêu cầu"
+      ],
+      [
+        "Input contract",
+        "hợp đồng đầu vào"
+      ]
+    ],
+    "completion": "Score trước/sau joblib.load tương đương; inference nhánh này không cần Spark.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 14
+  },
+  {
+    "day": 79,
+    "title": "Shard cho PyTorch và hai loại song song",
+    "goal": "Train shards đọc lại 120 dòng; không gọi thao tác xuất file là distributed training.",
+    "prerequisite": 78,
+    "new_terms": [
+      [
+        "Shard",
+        "phần dữ liệu chia sẵn"
+      ],
+      [
+        "Distributed training",
+        "huấn luyện phân tán một model"
+      ],
+      [
+        "Parallel experiments",
+        "nhiều thí nghiệm độc lập"
+      ]
+    ],
+    "completion": "Train shards đọc lại 120 dòng; không gọi thao tác xuất file là distributed training.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 14
+  },
+  {
+    "day": 80,
+    "title": "Chốt model và model card",
+    "goal": "Có báo cáo test thật và model card; không tự đặt metric đẹp hoặc khẳng định hiệu quả kinh doanh.",
+    "prerequisite": 79,
+    "new_terms": [
+      [
+        "Model card",
+        "bản mô tả mục đích và giới hạn model"
+      ],
+      [
+        "Holdout",
+        "tập giữ riêng để chấm cuối"
+      ]
+    ],
+    "completion": "Có báo cáo test thật và model card; không tự đặt metric đẹp hoặc khẳng định hiệu quả kinh doanh.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 13
+  },
+  {
+    "day": 81,
+    "title": "Tách notebook thành module và CLI",
+    "goal": "Có help, lệnh tái chạy và module không tạo side effect khi import.",
+    "prerequisite": 80,
+    "new_terms": [
+      [
+        "Module",
+        "đơn vị mã nguồn"
+      ],
+      [
+        "CLI — Command Line Interface",
+        "giao diện dòng lệnh"
+      ],
+      [
+        "Code reference",
+        "định danh code của lần chạy"
+      ]
+    ],
+    "completion": "Có help, lệnh tái chạy và module không tạo side effect khi import.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 16
+  },
+  {
+    "day": 82,
+    "title": "Data contract và quality gate",
+    "goal": "Nguồn chuẩn 120 dòng; các fixture sai bị chặn trước train.",
+    "prerequisite": 81,
+    "new_terms": [
+      [
+        "Data contract",
+        "hợp đồng dữ liệu"
+      ],
+      [
+        "Quality gate",
+        "điều kiện chất lượng để đi tiếp"
+      ]
+    ],
+    "completion": "Nguồn chuẩn 120 dòng; các fixture sai bị chặn trước train.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 16
+  },
+  {
+    "day": 83,
+    "title": "Unit test và fixture với pytest",
+    "goal": "Pytest mẫu xanh; có ít nhất một ca âm/biên cho code của bạn.",
+    "prerequisite": 82,
+    "new_terms": [
+      [
+        "Unit test",
+        "kiểm thử đơn vị logic"
+      ],
+      [
+        "Fixture",
+        "dữ liệu hoặc thiết lập dùng cho test"
+      ],
+      [
+        "Parametrization",
+        "chạy cùng test với nhiều ca"
+      ]
+    ],
+    "completion": "Pytest mẫu xanh; có ít nhất một ca âm/biên cho code của bạn.",
+    "environment": "dev",
+    "requirements": "requirements-dev.txt",
+    "source_part": 16
+  },
+  {
+    "day": 84,
+    "title": "Integration test cho dữ liệu và model",
+    "goal": "Nhánh sklearn tham chiếu score 120 dòng, rerun không nhân khóa; có integration test độc lập artifact.",
+    "prerequisite": 83,
+    "new_terms": [
+      [
+        "Integration test",
+        "kiểm thử các thành phần kết hợp"
+      ],
+      [
+        "tmp_path",
+        "thư mục tạm riêng của test"
+      ]
+    ],
+    "completion": "Nhánh sklearn tham chiếu score 120 dòng, rerun không nhân khóa; có integration test độc lập artifact.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 16
+  },
+  {
+    "day": 85,
+    "title": "Cấu hình log exception và exit code",
+    "goal": "Input version sai trả mã khác 0; không có artifact ngoài vùng chạy được tạo.",
+    "prerequisite": 84,
+    "new_terms": [
+      [
+        "Structured log",
+        "log có cấu trúc"
+      ],
+      [
+        "Exception",
+        "ngoại lệ"
+      ],
+      [
+        "Exit code",
+        "mã kết thúc"
+      ]
+    ],
+    "completion": "Input version sai trả mã khác 0; không có artifact ngoài vùng chạy được tạo.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 16
+  },
+  {
+    "day": 86,
+    "title": "MLflow experiment run và parameter",
+    "goal": "Có run_id, parameter và artifact manifest trong experiment spark-course-150.",
+    "prerequisite": 85,
+    "new_terms": [
+      [
+        "Experiment",
+        "nhóm thí nghiệm"
+      ],
+      [
+        "Run",
+        "một lần thực thi"
+      ],
+      [
+        "Parameter",
+        "tham số cấu hình"
+      ]
+    ],
+    "completion": "Có run_id, parameter và artifact manifest trong experiment spark-course-150.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 15
+  },
+  {
+    "day": 87,
+    "title": "Ghi metric và artifact từ lần train thật",
+    "goal": "Có metric thật cho các run; đủ source/code metadata do bạn bổ sung.",
+    "prerequisite": 86,
+    "new_terms": [
+      [
+        "Metric",
+        "chỉ số đo"
+      ],
+      [
+        "Artifact",
+        "đầu ra lưu kèm run"
+      ],
+      [
+        "Autologging",
+        "ghi thí nghiệm tự động"
+      ]
+    ],
+    "completion": "Có metric thật cho các run; đủ source/code metadata do bạn bổ sung.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 15
+  },
+  {
+    "day": 88,
+    "title": "Model signature input example và dependency",
+    "goal": "Model sklearn load từ run URI và cho cùng score trong tolerance.",
+    "prerequisite": 87,
+    "new_terms": [
+      [
+        "Model signature",
+        "mô tả kiểu đầu vào/đầu ra"
+      ],
+      [
+        "Input example",
+        "mẫu đầu vào"
+      ],
+      [
+        "Dependency environment",
+        "môi trường thư viện"
+      ]
+    ],
+    "completion": "Model sklearn load từ run URI và cho cùng score trong tolerance.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 15
+  },
+  {
+    "day": 89,
+    "title": "Registry version và alias",
+    "goal": "Truy từ version về run; phân biệt candidate alias với version bất biến.",
+    "prerequisite": 88,
+    "new_terms": [
+      [
+        "Model registry",
+        "sổ quản lý model"
+      ],
+      [
+        "Version",
+        "phiên bản cụ thể"
+      ],
+      [
+        "Alias",
+        "bí danh có thể đổi"
+      ]
+    ],
+    "completion": "Truy từ version về run; phân biệt candidate alias với version bất biến.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 15
+  },
+  {
+    "day": 90,
+    "title": "Backend store artifact store và truy vết prediction",
+    "goal": "Có một prediction truy về được model/run/source; không chỉ một template placeholder.",
+    "prerequisite": 89,
+    "new_terms": [
+      [
+        "Backend store",
+        "kho metadata"
+      ],
+      [
+        "Artifact store",
+        "kho tệp đầu ra"
+      ],
+      [
+        "Prediction lineage",
+        "nguồn gốc dự đoán"
+      ]
+    ],
+    "completion": "Có một prediction truy về được model/run/source; không chỉ một template placeholder.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 15
+  },
+  {
+    "day": 91,
+    "title": "DAG và dependency của pipeline",
+    "goal": "Thứ tự validate→features→train→evaluate→score; phân biệt đồ thị và scheduler.",
+    "prerequisite": 90,
+    "new_terms": [
+      [
+        "DAG — Directed Acyclic Graph",
+        "đồ thị có hướng không chu trình"
+      ],
+      [
+        "Dependency",
+        "quan hệ bước cần chạy trước"
+      ]
+    ],
+    "completion": "Thứ tự validate→features→train→evaluate→score; phân biệt đồ thị và scheduler.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 17
+  },
+  {
+    "day": 92,
+    "title": "Chạy Airflow TaskFlow trong môi trường riêng",
+    "goal": "Có log/UI run DAG thật, output và interpreter đúng; không chỉ parse file.",
+    "prerequisite": 91,
+    "new_terms": [
+      [
+        "TaskFlow",
+        "API tạo task từ hàm"
+      ],
+      [
+        "Scheduler",
+        "bộ lập lịch thực thi"
+      ]
+    ],
+    "completion": "Có log/UI run DAG thật, output và interpreter đúng; không chỉ parse file.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 17
+  },
+  {
+    "day": 93,
+    "title": "Retry timeout và gate không được bỏ qua",
+    "goal": "Candidate rejected không được score; có timeout/retry hữu hạn và log nguyên nhân.",
+    "prerequisite": 92,
+    "new_terms": [
+      [
+        "Retry policy",
+        "chính sách thử lại"
+      ],
+      [
+        "Timeout",
+        "giới hạn thời gian"
+      ],
+      [
+        "Failure propagation",
+        "truyền trạng thái thất bại"
+      ]
+    ],
+    "completion": "Candidate rejected không được score; có timeout/retry hữu hạn và log nguyên nhân.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 17
+  },
+  {
+    "day": 94,
+    "title": "Backfill Airflow data interval và giới hạn tài nguyên",
+    "goal": "120 dòng mỗi lượt, cùng ngày dữ liệu; không truyền bảng lớn qua XCom.",
+    "prerequisite": 93,
+    "new_terms": [
+      [
+        "Logical date",
+        "mốc logic của lần chạy"
+      ],
+      [
+        "Catchup",
+        "tạo bù các kỳ chưa chạy"
+      ],
+      [
+        "Pool",
+        "nhóm giới hạn số task"
+      ]
+    ],
+    "completion": "120 dòng mỗi lượt, cùng ngày dữ liệu; không truyền bảng lớn qua XCom.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 17
+  },
+  {
+    "day": 95,
+    "title": "Image container volume và kiến trúc máy",
+    "goal": "Có kết quả Docker thật và giải thích vòng đời dữ liệu, hoặc đánh dấu runtime chưa cài.",
+    "prerequisite": 94,
+    "new_terms": [
+      [
+        "Image",
+        "mẫu môi trường"
+      ],
+      [
+        "Container",
+        "tiến trình từ image"
+      ],
+      [
+        "Volume",
+        "vùng lưu gắn ngoài"
+      ]
+    ],
+    "completion": "Có kết quả Docker thật và giải thích vòng đời dữ liệu, hoặc đánh dấu runtime chưa cài.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 18
+  },
+  {
+    "day": 96,
+    "title": "Build image và chạy batch từ môi trường sạch",
+    "goal": "Có image chạy được và 120 prediction từ container, không dựa file ẩn trong notebook.",
+    "prerequisite": 95,
+    "new_terms": [
+      [
+        "Dockerfile",
+        "tệp mô tả build image"
+      ],
+      [
+        "Build context",
+        "tập tệp gửi cho builder"
+      ]
+    ],
+    "completion": "Có image chạy được và 120 prediction từ container, không dựa file ẩn trong notebook.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 18
+  },
+  {
+    "day": 97,
+    "title": "Batch scoring Spark và prediction metadata",
+    "goal": "120 prediction có metadata; code inference của bạn không gọi fit.",
+    "prerequisite": 96,
+    "new_terms": [
+      [
+        "Batch inference",
+        "dự đoán theo lô"
+      ],
+      [
+        "Prediction key",
+        "khóa của bản dự đoán"
+      ]
+    ],
+    "completion": "120 prediction có metadata; code inference của bạn không gọi fit.",
+    "environment": "spark_ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 18
+  },
+  {
+    "day": 98,
+    "title": "Compose readiness và dữ liệu bền vững",
+    "goal": "Có /ready 200 khi model tồn tại và 503 trong ca thiếu model; log run container thật.",
+    "prerequisite": 97,
+    "new_terms": [
+      [
+        "Compose",
+        "cấu hình các dịch vụ container"
+      ],
+      [
+        "Healthcheck",
+        "kiểm tra trạng thái dịch vụ"
+      ]
+    ],
+    "completion": "Có /ready 200 khi model tồn tại và 503 trong ca thiếu model; log run container thật.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 18
+  },
+  {
+    "day": 99,
+    "title": "CI chạy test và tạo artifact",
+    "goal": "Có test tái chạy được từ môi trường sạch; CI không tự phát hành production.",
+    "prerequisite": 98,
+    "new_terms": [
+      [
+        "CI — Continuous Integration",
+        "kiểm tra khi tích hợp code"
+      ],
+      [
+        "Build artifact",
+        "sản phẩm build có định danh"
+      ]
+    ],
+    "completion": "Có test tái chạy được từ môi trường sạch; CI không tự phát hành production.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 19
+  },
+  {
+    "day": 100,
+    "title": "Chạy Spark Standalone với worker thật",
+    "goal": "8 đơn/1400000 từ Spark Standalone, UI có worker thực; không chỉ đổi nhãn appName.",
+    "prerequisite": 99,
+    "new_terms": [
+      [
+        "Standalone cluster",
+        "cụm Spark tự quản"
+      ],
+      [
+        "Client / Cluster mode",
+        "driver phía gửi / trong cụm"
+      ]
+    ],
+    "completion": "8 đơn/1400000 từ Spark Standalone, UI có worker thực; không chỉ đổi nhãn appName.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 19
+  },
+  {
+    "day": 101,
+    "title": "Cloud object storage IAM và ngân sách",
+    "goal": "Có thiết kế quyền/chi phí; chỉ ghi deployed cloud khi có bằng chứng thực thi.",
+    "prerequisite": 100,
+    "new_terms": [
+      [
+        "IAM — Identity and Access Management",
+        "quản lý danh tính và quyền"
+      ],
+      [
+        "Service account",
+        "danh tính ứng dụng"
+      ],
+      [
+        "Quota",
+        "hạn mức tài nguyên"
+      ]
+    ],
+    "completion": "Có thiết kế quyền/chi phí; chỉ ghi deployed cloud khi có bằng chứng thực thi.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 19
+  },
+  {
+    "day": 102,
+    "title": "Release manifest promote và rollback",
+    "goal": "Con trỏ cuối về release-v1; có log version và xác nhận API sau restart.",
+    "prerequisite": 101,
+    "new_terms": [
+      [
+        "Release manifest",
+        "bản ghi thành phần phát hành"
+      ],
+      [
+        "Rollback",
+        "quay về phiên bản trước"
+      ],
+      [
+        "Atomic replace",
+        "thay con trỏ nguyên tử trên filesystem"
+      ]
+    ],
+    "completion": "Con trỏ cuối về release-v1; có log version và xác nhận API sau restart.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 19
+  },
+  {
+    "day": 103,
+    "title": "Giám sát schema missing và độ mới dữ liệu",
+    "goal": "Có quality report và ba phản ứng riêng, không đồng nhất mọi cảnh báo thành drift.",
+    "prerequisite": 102,
+    "new_terms": [
+      [
+        "Data freshness",
+        "độ mới dữ liệu"
+      ],
+      [
+        "Missing rate",
+        "tỷ lệ thiếu"
+      ],
+      [
+        "Schema drift",
+        "thay đổi lược đồ"
+      ]
+    ],
+    "completion": "Có quality report và ba phản ứng riêng, không đồng nhất mọi cảnh báo thành drift.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 20
+  },
+  {
+    "day": 104,
+    "title": "Data drift concept drift và nhãn đến trễ",
+    "goal": "Phân biệt thay đổi dữ liệu, lỗi pipeline và suy giảm có nhãn; không auto-retrain theo một số trung bình.",
+    "prerequisite": 103,
+    "new_terms": [
+      [
+        "Data drift",
+        "thay đổi phân bố đầu vào"
+      ],
+      [
+        "Concept drift",
+        "thay đổi quan hệ đầu vào và mục tiêu"
+      ],
+      [
+        "Delayed labels",
+        "nhãn đến trễ"
+      ]
+    ],
+    "completion": "Phân biệt thay đổi dữ liệu, lỗi pipeline và suy giảm có nhãn; không auto-retrain theo một số trung bình.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 20
+  },
+  {
+    "day": 105,
+    "title": "Chính sách retrain và nghiệm thu MLOps",
+    "goal": "Có candidate rejected, previous không bị thay, lineage và policy được kiểm tra.",
+    "prerequisite": 104,
+    "new_terms": [
+      [
+        "Retraining",
+        "huấn luyện lại"
+      ],
+      [
+        "Candidate gate",
+        "điều kiện chấp nhận model ứng viên"
+      ]
+    ],
+    "completion": "Có candidate rejected, previous không bị thay, lineage và policy được kiểm tra.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 20
+  },
+  {
+    "day": 106,
+    "title": "HTTP JSON request và response",
+    "goal": "Có contract rõ, chưa coi in JSON là đã có dịch vụ hoạt động.",
+    "prerequisite": 105,
+    "new_terms": [
+      [
+        "HTTP",
+        "giao thức yêu cầu và phản hồi"
+      ],
+      [
+        "Status code",
+        "mã trạng thái"
+      ],
+      [
+        "API contract",
+        "hợp đồng giao tiếp"
+      ]
+    ],
+    "completion": "Có contract rõ, chưa coi in JSON là đã có dịch vụ hoạt động.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 21
+  },
+  {
+    "day": 107,
+    "title": "Pydantic kiểm tra kiểu miền giá trị và trường thừa",
+    "goal": "Input chuẩn hợp lệ; ba mẫu sai bị ValidationError; không biến lỗi thành score giả.",
+    "prerequisite": 106,
+    "new_terms": [
+      [
+        "Pydantic",
+        "thư viện kiểm tra dữ liệu"
+      ],
+      [
+        "Validation",
+        "kiểm tra cấu trúc và quy tắc"
+      ],
+      [
+        "Finite number",
+        "số hữu hạn"
+      ]
+    ],
+    "completion": "Input chuẩn hợp lệ; ba mẫu sai bị ValidationError; không biến lỗi thành score giả.",
+    "environment": "api",
+    "requirements": "requirements-api.txt",
+    "source_part": 21
+  },
+  {
+    "day": 108,
+    "title": "FastAPI route và mã lỗi",
+    "goal": "Input hợp lệ 200, lỗi cấu trúc 422; không trả stack trace nội bộ cho client.",
+    "prerequisite": 107,
+    "new_terms": [
+      [
+        "Endpoint",
+        "đường dẫn chức năng"
+      ],
+      [
+        "FastAPI",
+        "framework API Python"
+      ],
+      [
+        "HTTPException",
+        "phản hồi lỗi có trạng thái"
+      ]
+    ],
+    "completion": "Input hợp lệ 200, lỗi cấu trúc 422; không trả stack trace nội bộ cho client.",
+    "environment": "api",
+    "requirements": "requirements-api.txt",
+    "source_part": 21
+  },
+  {
+    "day": 109,
+    "title": "Lifespan load model health và readiness",
+    "goal": "Có score model thật và version; không train trong endpoint; missing artifact không được giả vờ ready.",
+    "prerequisite": 108,
+    "new_terms": [
+      [
+        "Lifespan",
+        "vòng đời ứng dụng"
+      ],
+      [
+        "Health",
+        "tiến trình còn sống"
+      ],
+      [
+        "Readiness",
+        "sẵn sàng phục vụ"
+      ]
+    ],
+    "completion": "Có score model thật và version; không train trong endpoint; missing artifact không được giả vờ ready.",
+    "environment": "api",
+    "requirements": "requirements-api.txt",
+    "source_part": 21
+  },
+  {
+    "day": 110,
+    "title": "Xác thực phân quyền và kiểm thử API",
+    "goal": "Thiếu/sai key 401, key fixture đúng 200; có test giới hạn và quyền riêng.",
+    "prerequisite": 109,
+    "new_terms": [
+      [
+        "Authentication",
+        "xác thực danh tính"
+      ],
+      [
+        "Authorization",
+        "kiểm tra quyền"
+      ],
+      [
+        "Rate limit",
+        "giới hạn tần suất"
+      ]
+    ],
+    "completion": "Thiếu/sai key 401, key fixture đúng 200; có test giới hạn và quyền riêng.",
+    "environment": "api",
+    "requirements": "requirements-api.txt",
+    "source_part": 21
+  },
+  {
+    "day": 111,
+    "title": "Sync async queue và công việc CPU",
+    "goal": "Có thiết kế không chặn API bởi job dài; không gọi asyncio là cơ chế tăng năng lực CPU.",
+    "prerequisite": 110,
+    "new_terms": [
+      [
+        "Synchronous / Asynchronous",
+        "đồng bộ / bất đồng bộ"
+      ],
+      [
+        "Queue",
+        "hàng đợi"
+      ],
+      [
+        "CPU-bound / IO-bound",
+        "nặng tính toán / chờ vào ra"
+      ]
+    ],
+    "completion": "Có thiết kế không chặn API bởi job dài; không gọi asyncio là cơ chế tăng năng lực CPU.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 21
+  },
+  {
+    "day": 112,
+    "title": "Tensor shape dtype và device",
+    "goal": "Ví dụ output [2,1]; biến thể [4,1], biết sửa lỗi dimension.",
+    "prerequisite": 111,
+    "new_terms": [
+      [
+        "Tensor",
+        "mảng số nhiều chiều"
+      ],
+      [
+        "Shape",
+        "kích thước các chiều"
+      ],
+      [
+        "Device",
+        "thiết bị chứa và tính dữ liệu"
+      ]
+    ],
+    "completion": "Ví dụ output [2,1]; biến thể [4,1], biết sửa lỗi dimension.",
+    "environment": "torch",
+    "requirements": "torch==2.6.0",
+    "source_part": 22
+  },
+  {
+    "day": 113,
+    "title": "DataLoader forward loss backward optimizer",
+    "goal": "Loss cuối thấp hơn đầu, prediction/target cùng shape; không yêu cầu giá trị chính xác mọi thiết bị.",
+    "prerequisite": 112,
+    "new_terms": [
+      [
+        "DataLoader",
+        "bộ đọc theo lô"
+      ],
+      [
+        "Loss",
+        "hàm đo sai lệch"
+      ],
+      [
+        "Gradient",
+        "đạo hàm dùng cập nhật trọng số"
+      ]
+    ],
+    "completion": "Loss cuối thấp hơn đầu, prediction/target cùng shape; không yêu cầu giá trị chính xác mọi thiết bị.",
+    "environment": "torch",
+    "requirements": "torch==2.6.0",
+    "source_part": 22
+  },
+  {
+    "day": 114,
+    "title": "Train eval no_grad và checkpoint",
+    "goal": "Output trước/sau load khớp khi eval/no_grad; phân biệt mode với gradient.",
+    "prerequisite": 113,
+    "new_terms": [
+      [
+        "Train / Eval mode",
+        "chế độ học / đánh giá"
+      ],
+      [
+        "Checkpoint",
+        "bản lưu trạng thái model"
+      ],
+      [
+        "Autograd",
+        "cơ chế tự tính gradient"
+      ]
+    ],
+    "completion": "Output trước/sau load khớp khi eval/no_grad; phân biệt mode với gradient.",
+    "environment": "torch",
+    "requirements": "torch==2.6.0",
+    "source_part": 22
+  },
+  {
+    "day": 115,
+    "title": "Embedding attention và Transformer",
+    "goal": "Shape đúng, attention weights tổng 1; không gọi vector ngẫu nhiên là embedding ngữ nghĩa đã học.",
+    "prerequisite": 114,
+    "new_terms": [
+      [
+        "Embedding",
+        "biểu diễn token bằng vector"
+      ],
+      [
+        "Attention",
+        "kết hợp thông tin theo mức liên quan"
+      ],
+      [
+        "Transformer",
+        "kiến trúc mạng dùng attention"
+      ]
+    ],
+    "completion": "Shape đúng, attention weights tổng 1; không gọi vector ngẫu nhiên là embedding ngữ nghĩa đã học.",
+    "environment": "torch",
+    "requirements": "torch==2.6.0",
+    "source_part": 22
+  },
+  {
+    "day": 116,
+    "title": "Pretrained tokenizer và CPU MPS",
+    "goal": "Có tokenizer/model pretrained thật và báo cáo máy; ví dụ kiểm tra thiết bị chưa thay lab inference.",
+    "prerequisite": 115,
+    "new_terms": [
+      [
+        "Pretrained model",
+        "model đã học trước"
+      ],
+      [
+        "Tokenizer",
+        "bộ chia mã hóa token"
+      ],
+      [
+        "MPS",
+        "backend tính toán cho thiết bị Apple"
+      ]
+    ],
+    "completion": "Có tokenizer/model pretrained thật và báo cáo máy; ví dụ kiểm tra thiết bị chưa thay lab inference.",
+    "environment": "torch",
+    "requirements": "torch==2.6.0",
+    "source_part": 22
+  },
+  {
+    "day": 117,
+    "title": "Đo latency throughput và percentile",
+    "goal": "Có báo cáo đo thật tách số minh họa; không khẳng định một ngưỡng chung cho mọi máy.",
+    "prerequisite": 116,
+    "new_terms": [
+      [
+        "Latency",
+        "độ trễ mỗi request"
+      ],
+      [
+        "Throughput",
+        "số request mỗi đơn vị thời gian"
+      ],
+      [
+        "p95",
+        "phân vị độ trễ 95 phần trăm"
+      ]
+    ],
+    "completion": "Có báo cáo đo thật tách số minh họa; không khẳng định một ngưỡng chung cho mọi máy.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 23
+  },
+  {
+    "day": 118,
+    "title": "Batching worker cache và backpressure",
+    "goal": "Có đo trước/sau một thay đổi, cache không trả kết quả sai version và không vượt RAM.",
+    "prerequisite": 117,
+    "new_terms": [
+      [
+        "Batching",
+        "gom nhiều mẫu"
+      ],
+      [
+        "Worker",
+        "tiến trình phục vụ"
+      ],
+      [
+        "Backpressure",
+        "hạn chế nhận việc khi quá tải"
+      ]
+    ],
+    "completion": "Có đo trước/sau một thay đổi, cache không trả kết quả sai version và không vượt RAM.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 23
+  },
+  {
+    "day": 119,
+    "title": "Timeout retry canary và rollback dịch vụ",
+    "goal": "Vòng lặp dừng không quá 3 lần; rollout/rollback có log và không sửa quyền dữ liệu.",
+    "prerequisite": 118,
+    "new_terms": [
+      [
+        "Canary release",
+        "phát hành cho phần nhỏ lưu lượng"
+      ],
+      [
+        "Shadow traffic",
+        "chạy quan sát song song"
+      ],
+      [
+        "Retry budget",
+        "giới hạn thử lại"
+      ]
+    ],
+    "completion": "Vòng lặp dừng không quá 3 lần; rollout/rollback có log và không sửa quyền dữ liệu.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 23
+  },
+  {
+    "day": 120,
+    "title": "Nghiệm thu dự án 2 từ dữ liệu tới API",
+    "goal": "Có hệ thống ML chạy lại được cùng bằng chứng chất lượng/vận hành, sẵn nền để học LLM/RAG.",
+    "prerequisite": 119,
+    "new_terms": [
+      [
+        "Service level objective — SLO",
+        "mục tiêu mức phục vụ"
+      ],
+      [
+        "Runbook",
+        "hướng dẫn vận hành sự cố"
+      ]
+    ],
+    "completion": "Có hệ thống ML chạy lại được cùng bằng chứng chất lượng/vận hành, sẵn nền để học LLM/RAG.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 30
+  },
+  {
+    "day": 121,
+    "title": "Token context window và giới hạn sinh",
+    "goal": "Có budget và token count thật; không quy ước một từ bằng một token.",
+    "prerequisite": 120,
+    "new_terms": [
+      [
+        "Token",
+        "đơn vị văn bản của tokenizer"
+      ],
+      [
+        "Context window",
+        "giới hạn ngữ cảnh"
+      ],
+      [
+        "Sampling",
+        "cách chọn token kế tiếp"
+      ]
+    ],
+    "completion": "Có budget và token count thật; không quy ước một từ bằng một token.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 24
+  },
+  {
+    "day": 122,
+    "title": "Prompt template few-shot và dữ liệu không tin cậy",
+    "goal": "Có hai prompt version và nhãn trước khi chạy model, không bịa trường thiếu.",
+    "prerequisite": 121,
+    "new_terms": [
+      [
+        "Prompt template",
+        "mẫu lời nhắc"
+      ],
+      [
+        "Few-shot",
+        "ví dụ trong ngữ cảnh"
+      ],
+      [
+        "Instruction / Data",
+        "chỉ dẫn / dữ liệu"
+      ]
+    ],
+    "completion": "Có hai prompt version và nhãn trước khi chạy model, không bịa trường thiếu.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 24
+  },
+  {
+    "day": 123,
+    "title": "Structured output và validation lỗi",
+    "goal": "Parser chặn hai mẫu lỗi; bạn còn kiểm tra nội dung theo nguồn.",
+    "prerequisite": 122,
+    "new_terms": [
+      [
+        "Structured output",
+        "đầu ra có cấu trúc"
+      ],
+      [
+        "Schema validation",
+        "kiểm tra theo lược đồ"
+      ],
+      [
+        "Refusal / Error",
+        "từ chối / lỗi"
+      ]
+    ],
+    "completion": "Parser chặn hai mẫu lỗi; bạn còn kiểm tra nội dung theo nguồn.",
+    "environment": "api",
+    "requirements": "requirements-api.txt",
+    "source_part": 24
+  },
+  {
+    "day": 124,
+    "title": "Adapter model local và usage budget",
+    "goal": "Có output model thật và usage; parser/content được đánh giá riêng, lỗi được báo trung thực.",
+    "prerequisite": 123,
+    "new_terms": [
+      [
+        "Adapter",
+        "lớp giao tiếp tách model/provider"
+      ],
+      [
+        "Usage",
+        "lượng token sử dụng"
+      ],
+      [
+        "Deadline",
+        "hạn thời gian toàn yêu cầu"
+      ]
+    ],
+    "completion": "Có output model thật và usage; parser/content được đánh giá riêng, lỗi được báo trung thực.",
+    "environment": "generator",
+    "requirements": "requirements-ai.txt",
+    "source_part": 24
+  },
+  {
+    "day": 125,
+    "title": "Đánh giá prompt bằng tập cố định",
+    "goal": "Có bảng đo thật cho hai prompt; fixture minh họa field accuracy=0.75.",
+    "prerequisite": 124,
+    "new_terms": [
+      [
+        "Field accuracy",
+        "tỷ lệ trường trích đúng"
+      ],
+      [
+        "Schema pass rate",
+        "tỷ lệ đầu ra đạt schema"
+      ]
+    ],
+    "completion": "Có bảng đo thật cho hai prompt; fixture minh họa field accuracy=0.75.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 24
+  },
+  {
+    "day": 126,
+    "title": "RAG ingest tách khỏi luồng hỏi đáp",
+    "goal": "8 tài liệu có source/version/access; không gọi đọc JSON là đã hoàn thành RAG.",
+    "prerequisite": 125,
+    "new_terms": [
+      [
+        "RAG — Retrieval-Augmented Generation",
+        "sinh câu trả lời có truy xuất"
+      ],
+      [
+        "Ingestion",
+        "đưa tài liệu vào hệ thống"
+      ],
+      [
+        "Online path",
+        "luồng trả lời yêu cầu"
+      ]
+    ],
+    "completion": "8 tài liệu có source/version/access; không gọi đọc JSON là đã hoàn thành RAG.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 25
+  },
+  {
+    "day": 127,
+    "title": "Parser chunk boundary size và overlap",
+    "goal": "Mọi chunk có nguồn; size được mô tả đúng đơn vị, không lấy nhiều chunk làm thước đo chất lượng.",
+    "prerequisite": 126,
+    "new_terms": [
+      [
+        "Chunk",
+        "đoạn để truy xuất"
+      ],
+      [
+        "Overlap",
+        "phần giao giữa các đoạn"
+      ],
+      [
+        "Parser quality",
+        "chất lượng trích xuất nguồn"
+      ]
+    ],
+    "completion": "Mọi chunk có nguồn; size được mô tả đúng đơn vị, không lấy nhiều chunk làm thước đo chất lượng.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 25
+  },
+  {
+    "day": 128,
+    "title": "ID content hash version và xóa tài liệu",
+    "goal": "Rerun không nhân ID; thêm/sửa/xóa có kiểm tra tập chunk hoạt động.",
+    "prerequisite": 127,
+    "new_terms": [
+      [
+        "Document ID / Chunk ID",
+        "mã tài liệu / đoạn"
+      ],
+      [
+        "Content hash",
+        "mã băm nội dung"
+      ],
+      [
+        "Reindex",
+        "tạo lại chỉ mục"
+      ]
+    ],
+    "completion": "Rerun không nhân ID; thêm/sửa/xóa có kiểm tra tập chunk hoạt động.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 25
+  },
+  {
+    "day": 129,
+    "title": "Embedding thật normalization và model revision",
+    "goal": "Có vector thật và manifest; chưa tải model thì bài dense chưa hoàn thành.",
+    "prerequisite": 128,
+    "new_terms": [
+      [
+        "Embedding",
+        "biểu diễn ngữ nghĩa bằng vector"
+      ],
+      [
+        "Normalization",
+        "chuẩn hóa vector"
+      ],
+      [
+        "Cosine similarity",
+        "độ gần theo góc vector"
+      ]
+    ],
+    "completion": "Có vector thật và manifest; chưa tải model thì bài dense chưa hoàn thành.",
+    "environment": "embedding",
+    "requirements": "requirements-ai.txt",
+    "source_part": 25
+  },
+  {
+    "day": 130,
+    "title": "Qdrant local upsert filter delete",
+    "goal": "API store hoạt động; nghiệm thu semantic retrieval chỉ sau khi dùng embedding thật.",
+    "prerequisite": 129,
+    "new_terms": [
+      [
+        "Vector store",
+        "kho tìm vector"
+      ],
+      [
+        "Payload",
+        "metadata kèm vector"
+      ],
+      [
+        "Upsert",
+        "thêm hoặc cập nhật theo ID"
+      ]
+    ],
+    "completion": "API store hoạt động; nghiệm thu semantic retrieval chỉ sau khi dùng embedding thật.",
+    "environment": "qdrant",
+    "requirements": "requirements-ai.txt",
+    "source_part": 25
+  },
+  {
+    "day": 131,
+    "title": "Spark chuẩn bị corpus và embedding theo batch",
+    "goal": "Job manifest không trùng; embedding worker khôi phục có kiểm soát, không nhét API side effect vào UDF.",
+    "prerequisite": 130,
+    "new_terms": [
+      [
+        "Batch embedding",
+        "tính vector theo lô"
+      ],
+      [
+        "Rate limit",
+        "giới hạn tần suất"
+      ],
+      [
+        "Idempotency key",
+        "khóa chống lặp"
+      ]
+    ],
+    "completion": "Job manifest không trùng; embedding worker khôi phục có kiểm soát, không nhét API side effect vào UDF.",
+    "environment": "spark",
+    "requirements": "requirements.txt",
+    "source_part": 25
+  },
+  {
+    "day": 132,
+    "title": "Dense retrieval có lọc quyền",
+    "goal": "Có score embedding thật; không có doc sai quyền trong top-k.",
+    "prerequisite": 131,
+    "new_terms": [
+      [
+        "Dense retrieval",
+        "tìm bằng vector đặc"
+      ],
+      [
+        "Top-k",
+        "k kết quả đầu"
+      ],
+      [
+        "Trusted role",
+        "vai trò từ tầng xác thực"
+      ]
+    ],
+    "completion": "Có score embedding thật; không có doc sai quyền trong top-k.",
+    "environment": "embedding",
+    "requirements": "requirements-ai.txt",
+    "source_part": 26
+  },
+  {
+    "day": 133,
+    "title": "Sparse retrieval TF-IDF và mã chính xác",
+    "goal": "Có baseline từ vựng thật, được gọi đúng tên và không lẫn dense semantic.",
+    "prerequisite": 132,
+    "new_terms": [
+      [
+        "Sparse retrieval",
+        "tìm bằng biểu diễn thưa"
+      ],
+      [
+        "TF-IDF",
+        "trọng số từ theo tần suất"
+      ],
+      [
+        "BM25",
+        "xếp hạng từ vựng"
+      ]
+    ],
+    "completion": "Có baseline từ vựng thật, được gọi đúng tên và không lẫn dense semantic.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 26
+  },
+  {
+    "day": 134,
+    "title": "Hybrid search bằng RRF",
+    "goal": "Fixture b xếp đầu; hybrid thật cần dùng hai retrieval thật, không chỉ list viết tay.",
+    "prerequisite": 133,
+    "new_terms": [
+      [
+        "Hybrid search",
+        "kết hợp nhiều cách tìm"
+      ],
+      [
+        "RRF — Reciprocal Rank Fusion",
+        "hợp nhất theo nghịch đảo thứ hạng"
+      ]
+    ],
+    "completion": "Fixture b xếp đầu; hybrid thật cần dùng hai retrieval thật, không chỉ list viết tay.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 26
+  },
+  {
+    "day": 135,
+    "title": "Reranker chỉ sửa thứ hạng ứng viên",
+    "goal": "Có score model reranker thật và báo cáo đánh đổi; không gọi sort score cũ là model reranking.",
+    "prerequisite": 134,
+    "new_terms": [
+      [
+        "Reranker",
+        "model chấm lại ứng viên"
+      ],
+      [
+        "Cross-encoder",
+        "model xem query và đoạn cùng nhau"
+      ]
+    ],
+    "completion": "Có score model reranker thật và báo cáo đánh đổi; không gọi sort score cũ là model reranking.",
+    "environment": "reranker",
+    "requirements": "requirements-ai.txt",
+    "source_part": 26
+  },
+  {
+    "day": 136,
+    "title": "Recall MRR nDCG và tách dev test",
+    "goal": "Có metric đúng đơn vị doc, không tuning trên test hoặc chia Recall cho nhóm không có relevant.",
+    "prerequisite": 135,
+    "new_terms": [
+      [
+        "Recall@k",
+        "tỷ lệ tài liệu liên quan tìm được"
+      ],
+      [
+        "MRR",
+        "nghịch đảo hạng đúng đầu tiên trung bình"
+      ],
+      [
+        "nDCG",
+        "chất lượng thứ hạng có chuẩn hóa"
+      ]
+    ],
+    "completion": "Có metric đúng đơn vị doc, không tuning trên test hoặc chia Recall cho nhóm không có relevant.",
+    "environment": "ml",
+    "requirements": "requirements-ml.txt",
+    "source_part": 26
+  },
+  {
+    "day": 137,
+    "title": "Ghép context sinh trả lời và kiểm tra citation",
+    "goal": "Có output model thật/trace; câu không hỗ trợ phải từ chối hoặc được ghi lỗi, không che bằng keyword hit.",
+    "prerequisite": 136,
+    "new_terms": [
+      [
+        "Groundedness",
+        "mức câu được bằng chứng hỗ trợ"
+      ],
+      [
+        "Citation",
+        "trích dẫn nguồn"
+      ],
+      [
+        "Abstention",
+        "từ chối khi thiếu bằng chứng"
+      ]
+    ],
+    "completion": "Có output model thật/trace; câu không hỗ trợ phải từ chối hoặc được ghi lỗi, không che bằng keyword hit.",
+    "environment": "rag_models",
+    "requirements": "requirements-ai.txt",
+    "source_part": 27
+  },
+  {
+    "day": 138,
+    "title": "Bộ 40 câu và đánh giá generation riêng",
+    "goal": "Có đủ 40 output/trace và bảng chấm thật; lỗi generation/permission không bị loại khỏi mẫu số.",
+    "prerequisite": 137,
+    "new_terms": [
+      [
+        "Correctness",
+        "độ đúng nội dung"
+      ],
+      [
+        "Answerability",
+        "khả năng trả lời bằng nguồn"
+      ],
+      [
+        "LLM judge",
+        "model dùng để chấm"
+      ]
+    ],
+    "completion": "Có đủ 40 output/trace và bảng chấm thật; lỗi generation/permission không bị loại khỏi mẫu số.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 27
+  },
+  {
+    "day": 139,
+    "title": "Trace request version usage và dữ liệu riêng tư",
+    "goal": "Truy được lỗi theo từng bước, không chứa credential hoặc context ngoài quyền.",
+    "prerequisite": 138,
+    "new_terms": [
+      [
+        "Trace",
+        "dấu vết các bước"
+      ],
+      [
+        "Request ID",
+        "mã nối các sự kiện"
+      ],
+      [
+        "PII — Personally Identifiable Information",
+        "thông tin nhận diện cá nhân"
+      ]
+    ],
+    "completion": "Truy được lỗi theo từng bước, không chứa credential hoặc context ngoài quyền.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 27
+  },
+  {
+    "day": 140,
+    "title": "ACL trước retrieval và context",
+    "goal": "Permission violations ở context bằng 0; không coi prompt nhắc quyền là đủ.",
+    "prerequisite": 139,
+    "new_terms": [
+      [
+        "ACL — Access Control List",
+        "danh sách quyền"
+      ],
+      [
+        "Tenant",
+        "nhóm dữ liệu tách biệt"
+      ],
+      [
+        "Authorization filter",
+        "bộ lọc theo quyền"
+      ]
+    ],
+    "completion": "Permission violations ở context bằng 0; không coi prompt nhắc quyền là đủ.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 27
+  },
+  {
+    "day": 141,
+    "title": "Prompt injection regression và lỗi dịch vụ",
+    "goal": "Không chạy tool lạ hoặc cấp role qua prompt; lỗi được trace và dừng đúng budget.",
+    "prerequisite": 140,
+    "new_terms": [
+      [
+        "Prompt injection",
+        "nội dung không tin cậy chèn chỉ dẫn"
+      ],
+      [
+        "Regression test",
+        "kiểm thử lỗi quay lại"
+      ],
+      [
+        "Fail closed",
+        "từ chối khi kiểm tra quyền không thành công"
+      ]
+    ],
+    "completion": "Không chạy tool lạ hoặc cấp role qua prompt; lỗi được trace và dừng đúng budget.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 27
+  },
+  {
+    "day": 142,
+    "title": "Tool schema và công cụ chỉ đọc",
+    "goal": "job-001 succeeded; input sai bị chặn; job lạ đúng mẫu trả not_found.",
+    "prerequisite": 141,
+    "new_terms": [
+      [
+        "Tool calling",
+        "model đề xuất sử dụng công cụ"
+      ],
+      [
+        "Tool schema",
+        "lược đồ tham số công cụ"
+      ],
+      [
+        "Read-only",
+        "chỉ đọc"
+      ]
+    ],
+    "completion": "job-001 succeeded; input sai bị chặn; job lạ đúng mẫu trả not_found.",
+    "environment": "api",
+    "requirements": "requirements-api.txt",
+    "source_part": 28
+  },
+  {
+    "day": 143,
+    "title": "Dispatcher validation timeout và lỗi có thể retry",
+    "goal": "Không thực thi tên tùy ý, có loại lỗi rõ và retry hữu hạn.",
+    "prerequisite": 142,
+    "new_terms": [
+      [
+        "Dispatcher",
+        "bộ chọn và gọi công cụ"
+      ],
+      [
+        "Allowlist",
+        "danh sách được phép"
+      ],
+      [
+        "Retryable error",
+        "lỗi có thể thử lại"
+      ]
+    ],
+    "completion": "Không thực thi tên tùy ý, có loại lỗi rõ và retry hữu hạn.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 28
+  },
+  {
+    "day": 144,
+    "title": "Workflow cố định và agent loop có budget",
+    "goal": "Loop dừng đúng budget, trace đầy đủ; chỉ chọn agent nếu có bằng chứng lợi ích.",
+    "prerequisite": 143,
+    "new_terms": [
+      [
+        "Workflow",
+        "luồng bước định trước"
+      ],
+      [
+        "Agent loop",
+        "vòng model chọn bước tiếp"
+      ],
+      [
+        "Step budget",
+        "giới hạn số bước"
+      ]
+    ],
+    "completion": "Loop dừng đúng budget, trace đầy đủ; chỉ chọn agent nếu có bằng chứng lợi ích.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 28
+  },
+  {
+    "day": 145,
+    "title": "Nghiệm thu dự án 3 RAG có đánh giá",
+    "goal": "Có dense/generation thật, eval, ACL context 0 vi phạm và runbook; phần chưa làm ghi chưa đạt.",
+    "prerequisite": 144,
+    "new_terms": [
+      [
+        "End-to-end evaluation",
+        "đánh giá toàn luồng"
+      ],
+      [
+        "Index rollback",
+        "quay về chỉ mục trước"
+      ]
+    ],
+    "completion": "Có dense/generation thật, eval, ACL context 0 vi phạm và runbook; phần chưa làm ghi chưa đạt.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 30
+  },
+  {
+    "day": 146,
+    "title": "Quyết định fine-tune hay sửa retrieval",
+    "goal": "Có quyết định 1 trang gắn lỗi đã đo; không bắt buộc thuê GPU.",
+    "prerequisite": 145,
+    "new_terms": [
+      [
+        "Fine-tuning",
+        "điều chỉnh tham số bằng dữ liệu"
+      ],
+      [
+        "Root cause",
+        "nguyên nhân gốc"
+      ],
+      [
+        "Baseline comparison",
+        "so với mốc ban đầu"
+      ]
+    ],
+    "completion": "Có quyết định 1 trang gắn lỗi đã đo; không bắt buộc thuê GPU.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 29
+  },
+  {
+    "day": 147,
+    "title": "Dataset instruction và chống contamination",
+    "goal": "Có dataset và split manifest sạch, không chỉ hai dòng ví dụ trong mẫu.",
+    "prerequisite": 146,
+    "new_terms": [
+      [
+        "Instruction dataset",
+        "tập ví dụ hướng dẫn"
+      ],
+      [
+        "Contamination",
+        "nhiễm dữ liệu test vào train"
+      ],
+      [
+        "Data rights",
+        "quyền sử dụng dữ liệu"
+      ]
+    ],
+    "completion": "Có dataset và split manifest sạch, không chỉ hai dòng ví dụ trong mẫu.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 29
+  },
+  {
+    "day": 148,
+    "title": "PEFT LoRA quantization và thí nghiệm tùy chọn",
+    "goal": "Kế hoạch bắt buộc; adapter/benchmark chỉ có khi thực sự chạy, không có số cải thiện được hứa trước.",
+    "prerequisite": 147,
+    "new_terms": [
+      [
+        "PEFT",
+        "fine-tuning ít tham số"
+      ],
+      [
+        "LoRA — Low Rank Adaptation",
+        "điều chỉnh bằng ma trận hạng thấp"
+      ],
+      [
+        "Quantization",
+        "lượng tử hóa số"
+      ]
+    ],
+    "completion": "Kế hoạch bắt buộc; adapter/benchmark chỉ có khi thực sự chạy, không có số cải thiện được hứa trước.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 29
+  },
+  {
+    "day": 149,
+    "title": "Clean run data dictionary model card và runbook",
+    "goal": "Người khác tái chạy được theo tài liệu, có version và giới hạn, không dựa notebook đang mở.",
+    "prerequisite": 148,
+    "new_terms": [
+      [
+        "Reproducibility",
+        "khả năng tái lập"
+      ],
+      [
+        "Model card",
+        "mô tả mục đích và giới hạn"
+      ],
+      [
+        "Runbook",
+        "cách vận hành phục hồi"
+      ]
+    ],
+    "completion": "Người khác tái chạy được theo tài liệu, có version và giới hạn, không dựa notebook đang mở.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 30
+  },
+  {
+    "day": 150,
+    "title": "Nghiệm thu toàn lộ trình và demo portfolio",
+    "goal": "Có ba dự án nghiệm thu, demo và rubric có dẫn chứng; không tự đánh dấu phần mở rộng chưa chạy.",
+    "prerequisite": 149,
+    "new_terms": [
+      [
+        "Portfolio",
+        "bộ dự án minh chứng"
+      ],
+      [
+        "Rubric",
+        "bảng tiêu chí chấm"
+      ],
+      [
+        "Trade-off",
+        "đánh đổi kỹ thuật"
+      ]
+    ],
+    "completion": "Có ba dự án nghiệm thu, demo và rubric có dẫn chứng; không tự đánh dấu phần mở rộng chưa chạy.",
+    "environment": "python",
+    "requirements": "Không cần cài thêm cho ví dụ này.",
+    "source_part": 30
+  }
+]

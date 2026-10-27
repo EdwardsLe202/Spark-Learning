@@ -1,0 +1,4 @@
+# Bộ nền cho ngày 02–13 và 16; dùng Python 3.11 + Java 17.
+pyspark==3.5.7
+pytest==8.3.5
+

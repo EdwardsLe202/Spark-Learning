@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "purpose": "Spark beginner course",
+  "rows": {
+    "orders.csv": 8,
+    "orders_dirty.csv": 10,
+    "customers.csv": 5
+  },
+  "sha256": {
+    "orders.csv": "173434adf019104f6ae357ed909db130f9561b7e895a872720e7b5b535699a63",
+    "orders_dirty.csv": "e5c95764187f10e8946a534e4388f9d5e7ce7b60dd35b25ab92d8af2584b166d",
+    "customers.csv": "1ae091f653a954799e931e0e5d70169072fe1b6f716dab0a6e5ac6aa9f63b7ba"
+  }
+}
