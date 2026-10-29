@@ -1,4 +1,4 @@
-"""Kiểm tra khóa nền Spark và bảo toàn bài cũ, không cần cài PySpark.
+"""Kiểm tra khóa nền Spark và nội dung tham khảo, không cần cài PySpark.
 
 Chạy từ repo: python scripts/check_repo.py
 Kiểm tra này không chấm bài làm của người học hoặc mức hiểu bài.
@@ -41,7 +41,7 @@ def main():
         n = day["day"]
         check(day["prerequisite"] == (None if n == 1 else n - 1), f"Điều kiện đầu vào vòng lặp hoặc thiếu ở ngày {n}")
         base = ROOT / f"day-{n:02d}"
-        for filename in ["README.md", "ly_thuyet.md", "thuc_hanh.md", "vi_du.py", "bai_lam.py", "ghi_chu.md"]:
+        for filename in ["README.md", "ly_thuyet.md", "thuc_hanh.md", "vi_du.py", "bai_lam.py"]:
             path = base / filename
             check(path.is_file() and path.stat().st_size > 0, f"Thiếu/rỗng: {path.relative_to(ROOT)}")
         theory = (base / "ly_thuyet.md").read_text(encoding="utf-8")
@@ -128,14 +128,14 @@ def main():
         path = archive / name
         check(path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest() == digest,
               f"Bản lưu không còn nguyên vẹn: {name}")
-    check("day-01/bai_lam.py" in backup["sha256"] and "day-01/ghi_chu.md" in backup["sha256"], "Thiếu bài làm/ghi chú ngày 01 trong bản lưu")
+    check("day-01/bai_lam.py" in backup["sha256"], "Thiếu bài làm ngày 01 trong bản tham khảo")
 
     if errors:
         print("\n".join("ERROR: " + error for error in errors))
         raise SystemExit(1)
     print(f"OK: {len(plan)} ngày, 150 ý gốc, điều kiện đầu vào xuôi, ví dụ và khung bài làm; {len(python_files)} Python hợp lệ.")
     print(f"OK: {len(markdown)} Markdown, {checked_links} link local; dữ liệu tính tay, biên lọc và đối soát nguồn lỗi.")
-    print(f"OK: bảo toàn {len(backup['sha256'])} tệp cũ, gồm bài làm/ghi chú ngày 01.")
+    print(f"OK: hash của {len(backup['sha256'])} tệp tham khảo, gồm bài làm ngày 01; lịch sử dọn tệp trong BAN_LUU.json.")
     print("Không chấm tự động mức hiểu bài hay các phần người học chưa thực hiện.")
 
 

@@ -12,7 +12,7 @@ Ngưỡng 0.5: precision=0.5, recall=0.5; các ô đều 1.
 
 1. [Lý thuyết](ly_thuyet.md): hiểu tình huống, từ mới, dự đoán ví dụ.
 2. [Thực hành](thuc_hanh.md): chạy [mẫu](vi_du.py), thử thay đổi rồi viết vào [bai_lam.py](bai_lam.py).
-3. [Ghi chú](ghi_chu.md): kết quả, lỗi, câu chưa rõ; cập nhật tiến độ khi đã tự làm.
+3. Đối chiếu kết quả, ghi giải thích bằng comment trong [bài làm](bai_lam.py) khi cần; cập nhật tiến độ khi đã tự làm.
 
 ## Điều kiện chạy
 

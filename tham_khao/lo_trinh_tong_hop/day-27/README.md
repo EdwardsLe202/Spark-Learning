@@ -10,7 +10,7 @@ Dành khoảng 3–4 giờ cho phần cốt lõi: 45–60 phút đọc và giả
 
 1. Đọc [lý thuyết](ly_thuyet.md), tự kể lại ví dụ bằng lời của bạn.
 2. Làm [thực hành](thuc_hanh.md) trong [bai_lam.py](bai_lam.py). File có ví dụ khởi động và các TODO theo ngày, chưa phải lời giải toàn bộ bài.
-3. Lưu bằng chứng và câu trả lời trong [ghi_chu.md](ghi_chu.md); đầu ra chạy thử ở `artifacts/day-27/`.
+3. Lưu bằng chứng và câu trả lời trong [phần comment trong bài làm](bai_lam.py); đầu ra chạy thử ở `artifacts/day-27/`.
 4. Chỉ đánh dấu xong khi kiểm tra được tiêu chí, rồi cập nhật [tiến độ](../TIEN_DO.md).
 
 Điều kiện đầu vào: Môi trường `requirements-ai.txt` cho dense retrieval; corpus và eval có sẵn trong `data/rag/`.

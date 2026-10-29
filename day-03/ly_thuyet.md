@@ -8,13 +8,13 @@
 
 Bạn viết Python, nhưng bộ máy Spark còn cần Java để chạy. **Dependency (thư viện chương trình cần)** trong khóa nền này chỉ là PySpark. Repo giữ bộ Python 3.11, Java 17 và PySpark 3.5.7 để ví dụ có môi trường nhất quán; chưa cần cài công cụ dữ liệu khác.
 
-**Terminal (cửa sổ chạy lệnh)** là nơi bạn gõ `python ...`. Một lệnh shell và một câu Python là hai thứ khác nhau: `python --version` gõ trong terminal; `print(1 + 2)` viết trong file Python. Khi tài liệu đặt code trong khối bash, chạy ở terminal; khối python là nội dung Python.
+**Terminal (cửa sổ chạy lệnh)** là nơi bạn gõ `uv run python ...`. Một lệnh shell và một câu Python là hai thứ khác nhau: `uv run python --version` gõ trong terminal; `print(1 + 2)` viết trong file Python. Khi tài liệu đặt code trong khối bash, chạy ở terminal; khối python là nội dung Python.
 
 ## 2. Vì sao tạo môi trường riêng?
 
-**Virtual environment (môi trường Python riêng)** là thư mục giữ Python và các gói dành cho repo. Tên `.venv` chỉ là tên thư mục thông dụng. `source .venv/bin/activate` chọn môi trường ấy cho terminal hiện tại. Mở terminal khác cần kích hoạt lại.
+**Virtual environment (môi trường Python riêng)** là thư mục giữ Python và các gói dành cho repo. uv tạo thư mục `.venv` và chọn môi trường ấy mỗi lần bạn chạy `uv run`. Mở terminal khác, chỉ cần đứng ở gốc repo và chạy lại cùng lệnh; không cần activate.
 
-`python -m pip install -r requirements.txt` đọc danh sách package để cài cho đúng Python đang chạy. `JAVA_HOME` chỉ tới JDK; bạn làm theo nhánh phù hợp trong hướng dẫn cài đặt, chưa cần tự sửa file cấu hình hệ thống.
+`uv sync` cài các gói từ `pyproject.toml` theo phiên bản đã chốt trong `uv.lock`. `uv run` cũng tự đồng bộ môi trường trước khi chạy. `JAVA_HOME` chỉ tới JDK; bạn làm theo nhánh phù hợp trong hướng dẫn cài đặt, chưa cần tự sửa file cấu hình hệ thống.
 
 ## 3. Kiểm tra từng bước
 
@@ -56,14 +56,14 @@ Chỉ cần gắn từ với ví dụ trong bài. Chưa cần học thuộc cả
 
 ## Ba câu kiểm tra hiểu bài
 
-1. Mở terminal mới có cần activate lại không?
+1. Dùng uv run ở terminal mới có cần activate lại không?
 2. Import pyspark thành công đã kiểm tra toàn bộ Spark chưa?
 3. Có cần gỡ Python toàn máy không?
 
 <details>
 <summary>Mở sau khi đã tự trả lời</summary>
 
-1. Có.
+1. Không; đứng ở gốc repo rồi dùng uv run, uv tự chọn môi trường.
 2. Chưa; ngày 04 còn kiểm tra Java và phiên xử lý thật.
 3. Không; dùng môi trường riêng.
 

@@ -1,5 +1,5 @@
-"""Ngày 04: bài tự làm. Đọc thuc_hanh.md trước khi viết code.
-Chạy từ gốc repo: python scripts/run_day.py 04
+"""Ngày 04: tạo bảng ba đơn, thêm O004 và dùng tên my_orders.
+Chạy từ gốc repo: uv run python scripts/run_day.py 04
 """
 import os
 import sys
@@ -10,13 +10,23 @@ os.environ.setdefault("PYSPARK_PYTHON", sys.executable)
 spark = SparkSession.builder.master("local[2]").appName("beginner-day-04").getOrCreate()
 spark.sparkContext.setLogLevel("ERROR")
 try:
-    print("Đây là khung bài làm; chạy được khung chưa có nghĩa đã làm xong.")
+    # SparkSession là phiên làm việc; my_orders là bảng trong phiên đó.
+    rows = [
+        ("O001", "C001", 100000),
+        ("O002", "C001", 200000),
+        ("O003", "C002", 50000),
+    ]
+    my_orders = spark.createDataFrame(rows, ["order_id", "customer_id", "amount"])
+    print("Bảng ban đầu:")
+    my_orders.orderBy("order_id").show()
+    print("Số dòng ban đầu:", my_orders.count())  # 3
 
-    # BẮT ĐẦU VIẾT BÀI CỦA BẠN Ở ĐÂY
-    # 1. Chạy vi_du.py bằng lệnh trong bài này, tìm đúng ba dòng đơn hàng giữa các dòng log.
-    # 2. Sao chép ba dòng rows/createDataFrame/show vào vùng tự làm của bai_lam.py.
-    # 3. Thêm O004, C002, 70000 và in lại bảng/count.
-    # 4. Đổi tên biến orders thành my_orders nhất quán; kiểm tra vẫn chạy.
-    # KẾT THÚC VÙNG BÀI LÀM
+    # Sửa danh sách Python không tự thay đổi DataFrame đã tạo.
+    # Tạo lại bảng từ danh sách bốn đơn, vẫn dùng tên my_orders nhất quán.
+    rows.append(("O004", "C002", 70000))
+    my_orders = spark.createDataFrame(rows, ["order_id", "customer_id", "amount"])
+    print("Sau khi thêm O004:")
+    my_orders.orderBy("order_id").show()
+    print("Số dòng mới:", my_orders.count())  # 4
 finally:
     spark.stop()

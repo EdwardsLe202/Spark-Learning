@@ -6,7 +6,7 @@ Lộ trình thực hành tiếng Việt dành cho người đã dùng Python và
 
 1. Mở [ngày 01](day-01/README.md), đọc lý thuyết rồi làm lab ngay trong thư mục ngày.
 2. Đến ngày 02, làm theo [cài đặt macOS](docs/CAI_DAT.md): Python 3.11, Java 17, PySpark 3.5.7. Không dùng Python mặc định mà chưa kiểm tra phiên bản.
-3. Sửa `day-XX/bai_lam.py`, chạy `python scripts/run_day.py XX` từ repo, lưu kết quả vào `ghi_chu.md` của ngày.
+3. Sửa `day-XX/bai_lam.py`, chạy `python scripts/run_day.py XX` từ repo, lưu kết quả vào phần comment trong `bai_lam.py` của ngày.
 4. Tự kiểm tra tiêu chí rồi cập nhật [TIEN_DO.md](TIEN_DO.md). Khi cần hướng dẫn, gửi ngày, bước, code, lệnh chạy và kết quả.
 
 ## Nhịp học và phạm vi
@@ -58,7 +58,6 @@ day-01/ ... day-30/
   ly_thuyet.md    Giải thích, thuật ngữ, ví dụ và nguồn
   thuc_hanh.md    Bước làm, kết quả, lỗi thường gặp và mở rộng
   bai_lam.py      Ví dụ khởi động + TODO để bạn viết tiếp
-  ghi_chu.md      Lệnh chạy, kết quả, câu hỏi và nhật ký
 data/raw/         CSV giả lập, tiny fixture, dirty fixture và hash
 data/rag/         Tài liệu tự tạo và 40 câu hỏi có nhãn
 projects/         Đặc tả, checklist và nơi gom code của ba mốc

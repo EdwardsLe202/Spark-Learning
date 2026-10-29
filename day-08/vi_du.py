@@ -1,5 +1,5 @@
 """Ngày 08: ví dụ hoàn chỉnh để đọc và chạy.
-Chạy từ gốc repo: python scripts/run_day.py 08 --example
+Chạy từ gốc repo: uv run python scripts/run_day.py 08 --example
 """
 import os
 import sys

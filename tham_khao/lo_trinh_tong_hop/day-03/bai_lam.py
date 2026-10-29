@@ -17,4 +17,4 @@ if __name__ == "__main__":
 # TODO Chạy ví dụ; ghi nơi có `Exchange` và giải thích vì sao phải nhóm các khóa.
 # TODO Thêm hai action `count()` rồi `show()`. Xem Spark UI khi giữ phiên bằng `input()`; ghi số job thực tế, không đoán một action luôn bằng đúng một job.
 # TODO Đổi số partition đầu vào từ 4 thành 2 rồi 8. Đối chiếu task và kết quả.
-# TODO Vẽ quan hệ application → job → stage → task vào `ghi_chu.md`.
+# TODO Vẽ quan hệ application → job → stage → task vào phần comment trong `bai_lam.py`.

@@ -1,11 +1,22 @@
-"""Ngày 01: bài tự làm. Đọc thuc_hanh.md trước khi viết code.
-Chạy từ gốc repo: python scripts/run_day.py 01
+"""Ngày 01: đọc bảng, tính tiền và giải thích vai trò của Spark.
+Chạy từ gốc repo: uv run python scripts/run_day.py 01
 """
-print("Làm theo thuc_hanh.md; viết câu trả lời hoặc code của bạn bên dưới.")
 
-# 1. Viết một câu mô tả dòng O002.
-# 2. Tính tiền của C002.
-# 3. Giả sử thêm đơn O004 của C002 trị giá 70000. Bảng mới có mấy đơn, mấy khách và tổng tiền bao nhiêu?
-# 4. Viết một câu ngắn: file đơn hàng giữ gì, còn Spark giúp làm gì?
+# Một dòng là một đơn hàng; C001 có hai đơn khác nhau.
+print("Bảng ban đầu: 3 đơn, 3 cột, 2 khách khác nhau.")
+print("Tổng ba đơn:", 100000 + 200000 + 50000)
+print("Tổng của C001:", 100000 + 200000)
 
-# Bắt đầu tự viết ở đây.
+# 1. Đọc dòng O002.
+print("O002: khách C001 mua một đơn trị giá 200000 đồng.")
+
+# 2. C002 chỉ có đơn O003 trong bảng ban đầu.
+print("Tổng của C002:", 50000)
+
+# 3. Thêm O004 của C002, không tạo thêm khách mới.
+print("Sau khi thêm O004: 4 đơn, vẫn 2 khách.")
+print("Tổng tiền mới:", 100000 + 200000 + 50000 + 70000)
+
+# 4. Phân biệt nơi lưu dữ liệu và công cụ xử lý.
+print("File đơn hàng lưu mã đơn, mã khách và số tiền.")
+print("Spark đọc và xử lý dữ liệu, chẳng hạn lọc đơn theo khách rồi tính tổng.")

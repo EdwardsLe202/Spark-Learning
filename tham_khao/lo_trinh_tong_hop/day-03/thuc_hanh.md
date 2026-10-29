@@ -1,6 +1,6 @@
 # Ngày 03 — Thực hành
 
-[Trang ngày](README.md) · [Lý thuyết](ly_thuyet.md) · [File làm bài](bai_lam.py) · [Nhật ký](ghi_chu.md)
+[Trang ngày](README.md) · [Lý thuyết](ly_thuyet.md) · [File làm bài](bai_lam.py)
 
 ## Đầu vào và chỗ làm
 
@@ -14,7 +14,7 @@ Chạy từ **thư mục gốc repo**, sau khi kích hoạt môi trường ở [
 2. Chạy ví dụ; ghi nơi có `Exchange` và giải thích vì sao phải nhóm các khóa.
 3. Thêm hai action `count()` rồi `show()`. Xem Spark UI khi giữ phiên bằng `input()`; ghi số job thực tế, không đoán một action luôn bằng đúng một job.
 4. Đổi số partition đầu vào từ 4 thành 2 rồi 8. Đối chiếu task và kết quả.
-5. Vẽ quan hệ application → job → stage → task vào `ghi_chu.md`.
+5. Vẽ quan hệ application → job → stage → task vào phần comment trong `bai_lam.py`.
 
 ## Cách chạy
 
@@ -22,7 +22,7 @@ Chạy từ **thư mục gốc repo**, sau khi kích hoạt môi trường ở [
 python scripts/run_day.py 03
 ```
 
-Lưu đầu ra tự tạo ở `artifacts/day-03/` bằng `output_dir(3)`; thư mục này được Git bỏ qua. Ghi đường dẫn bằng chứng vào `ghi_chu.md`. Nếu ngày sau cần artifact, giữ lại hoặc tái tạo bằng lệnh đã ghi. Không sửa `data/raw/` để làm đẹp kết quả; tạo bản thử ở artifacts.
+Lưu đầu ra tự tạo ở `artifacts/day-03/` bằng `output_dir(3)`; thư mục này được Git bỏ qua. Ghi đường dẫn bằng chứng vào phần comment trong `bai_lam.py`. Nếu ngày sau cần artifact, giữ lại hoặc tái tạo bằng lệnh đã ghi. Không sửa `data/raw/` để làm đẹp kết quả; tạo bản thử ở artifacts.
 
 ## Kết quả cần đối chiếu
 
@@ -43,5 +43,5 @@ Tắt AQE cho một lần quan sát rồi bật lại; mô tả sự khác nhau 
 - [ ] Đã làm đủ các bước cốt lõi, có lệnh tái chạy và đầu ra thật.
 - [ ] Đã đối chiếu kết quả trên, không chỉ thấy chương trình chạy không lỗi.
 - [ ] Có ít nhất một biến thể hoặc ca lỗi để kiểm tra hiểu biết.
-- [ ] Đã trả lời câu hỏi ở lý thuyết trong `ghi_chu.md`.
+- [ ] Đã trả lời câu hỏi ở lý thuyết trong phần comment trong `bai_lam.py`.
 - [ ] Phân biệt phần chạy thật, mô phỏng và phần mở rộng chưa làm.

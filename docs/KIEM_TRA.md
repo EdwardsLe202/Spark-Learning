@@ -1,3 +1,15 @@
+# Kiểm tra cập nhật ngày 29/10/2026
+
+- Hoàn thiện bài làm ngày 01–08; cả 8 bài chạy qua `uv run --locked python scripts/run_day.py <ngày>` và đối chiếu đúng kết quả kỳ vọng. Các bảng đầu ra của ngày 04–08 đã được so từng dòng với dữ liệu bài tập.
+- Cả 8 ví dụ ngày 01–08 chạy thành công qua `uv run python scripts/verify_examples.py --days 1 2 3 4 5 6 7 8`.
+- Kiểm tra thêm cách chạy trực tiếp: `uv run python day-08/bai_lam.py`. Ngày 03 cũng chạy lại thành công trong shell mới.
+- Môi trường: Python 3.11.15, PySpark 3.5.7, Java 17.0.19. `uv sync --locked` và `uv lock --check` thành công; cấu hình nền ở [pyproject.toml](../pyproject.toml), phiên bản chốt ở [uv.lock](../uv.lock).
+- Xóa 180 file ghi chú: 150 ngày chính và 30 ngày tham khảo. Đã sửa các liên kết và bỏ yêu cầu file ghi chú trong hai bộ kiểm tra cấu trúc.
+- Hai bộ kiểm tra repo chính/tham khảo đều qua; hash dữ liệu nguồn giữ nguyên. Lịch sử thay đổi bản tham khảo được ghi trong BAN_LUU.json.
+- Log bài làm ở `artifacts/beginner/verification/day-01-08/`; log ví dụ ở `artifacts/full/verification/run-50d5c646f2/`. Các thư mục này được Git bỏ qua.
+
+Đợt cập nhật này kiểm tra phạm vi ngày 01–08 và cấu trúc toàn repo; không chạy lại bộ test ML/MLOps/RAG. Báo cáo ngày 27/10 bên dưới là lịch sử của đợt trước, gồm cấu trúc file trước khi xóa ghi chú.
+
 # Phạm vi kiểm tra trước commit ngày27/10/2026
 
 [Lịch150 ngày](../LO_TRINH_DAY_DU.md)

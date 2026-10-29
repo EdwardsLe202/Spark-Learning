@@ -1,5 +1,5 @@
 """Ngày 27: bài tự làm. Đọc thuc_hanh.md trước khi viết code.
-Chạy từ gốc repo: python scripts/run_day.py 27
+Chạy từ gốc repo: uv run python scripts/run_day.py 27
 """
 import os
 import sys

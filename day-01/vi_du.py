@@ -1,5 +1,5 @@
 """Ngày 01: ví dụ hoàn chỉnh để đọc và chạy.
-Chạy từ gốc repo: python scripts/run_day.py 01 --example
+Chạy từ gốc repo: uv run python scripts/run_day.py 01 --example
 """
 print("order_id | customer_id | amount")
 print("O001     | C001        | 100000")

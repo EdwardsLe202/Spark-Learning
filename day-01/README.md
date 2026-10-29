@@ -7,8 +7,8 @@
 ## Mở theo thứ tự này
 
 1. Đọc [ly_thuyet.md](ly_thuyet.md), dừng tại ví dụ để tự dự đoán.
-2. Mở [thuc_hanh.md](thuc_hanh.md): chạy mẫu, thay một chi tiết, rồi tự làm.
-3. Viết vài dòng vào [ghi_chu.md](ghi_chu.md). Không cần mở các ngày khác.
+2. Mở [thuc_hanh.md](thuc_hanh.md) để xem đề bài; [bai_lam.py](bai_lam.py) đã có lời giải đầy đủ để chạy và đối chiếu.
+3. Đối chiếu kết quả trong [bai_lam.py](bai_lam.py). Nếu cần, ghi giải thích bằng comment ngay cạnh code.
 
 **Cần biết trước:** Không cần biết Spark hoặc cài thêm công cụ.
 
@@ -28,3 +28,9 @@ Nếu hết giờ mà chưa hiểu, học tiếp bài này ở buổi sau. Số 
 Tự tính được 350000 và 300000, giải thích được một dòng là một đơn; không cần chạy code.
 
 Chưa tự làm được thì mở gợi ý ở cuối bài thực hành, thử lại một lần. Khi cần hỏi: “Tôi ở ngày 01, mục ..., đầu vào ..., tôi nghĩ kết quả là ..., nhưng chạy ra ...”.
+
+## Bài làm đã hoàn thiện
+
+Tổng ban đầu 350000, C001 mua 300000, C002 mua 50000; thêm O004 được 4 đơn, 2 khách và 420000 đồng.
+
+Chạy từ gốc repo: `uv run python scripts/run_day.py 01`. Các câu trả lời và giải thích nằm ngay trong bài làm.

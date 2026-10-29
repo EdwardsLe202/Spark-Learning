@@ -1,10 +1,11 @@
-"""Ngày 06: bài tự làm. Đọc thuc_hanh.md trước khi viết code.
-Chạy từ gốc repo: python scripts/run_day.py 06
+"""Ngày 06: đọc CSV, phân biệt header và dữ liệu, thử lỗi đường dẫn.
+Chạy từ gốc repo: uv run python scripts/run_day.py 06
 """
 import os
 import sys
 from pathlib import Path
 from pyspark.sql import SparkSession
+from pyspark.errors import AnalysisException
 
 # Dùng cùng Python cho các phần xử lý; giữ phần này trong những bài đầu.
 os.environ.setdefault("PYSPARK_PYTHON", sys.executable)
@@ -17,14 +18,29 @@ try:
     orders = (spark.read.option("header", True)
               .schema("order_id string, customer_id string, order_date string, amount long, status string")
               .csv(str(DATA / "orders.csv")))
-    print("Đây là khung bài làm; chạy được khung chưa có nghĩa đã làm xong.")
-    orders.show(truncate=False)
+    orders.orderBy("order_id").show(truncate=False)
+    orders.printSchema()
+    print("Tên cột:", orders.columns)
+    print("Số đơn (không tính header):", orders.count())  # 8
 
-    # BẮT ĐẦU VIẾT BÀI CỦA BẠN Ở ĐÂY
-    # 1. Mở orders.csv bằng trình soạn thảo và tìm dòng tên cột.
-    # 2. Chạy ví dụ, tìm O004 và mô tả trạng thái của nó.
-    # 3. Trong bai_lam.py, in tên cột và số đơn. Viết vào ghi chú file có bao nhiêu dòng vật lý nếu tính cả header.
-    # 4. Đổi đường dẫn sang tên file không tồn tại trên bản thử để nhận ra lỗi đường dẫn; sửa lại sau đó.
-    # KẾT THÚC VÙNG BÀI LÀM
+    # Đếm dòng văn bản chỉ để đối chiếu fixture này: mỗi đơn nằm trên một dòng.
+    with (DATA / "orders.csv").open(encoding="utf-8") as source:
+        header = source.readline().strip()
+        physical_lines = 1 + sum(1 for _ in source)
+    print("Header:", header)
+    print("Số dòng vật lý, tính cả header:", physical_lines)  # 9
+    print("O004: khách C003, ngày 2025-01-04, 300000 đồng, cancelled (đã hủy).")
+
+    # Thử một đường dẫn sai riêng; bảng orders vẫn đọc từ file chuẩn.
+    try:
+        spark.read.option("header", True).csv(str(DATA / "__missing_day_06__.csv"))
+    except AnalysisException as exc:
+        if exc.getErrorClass() != "PATH_NOT_FOUND":
+            raise
+        print("Lỗi đường dẫn dự kiến:", exc)
+    else:
+        raise AssertionError("Bản thử cần một đường dẫn không tồn tại.")
+    print("Đường dẫn đúng:", DATA / "orders.csv")
+    print("Bảng chuẩn vẫn có", orders.count(), "đơn; không cần đổi tên cột để sửa lỗi đường dẫn.")
 finally:
     spark.stop()

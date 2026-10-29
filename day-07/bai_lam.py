@@ -1,5 +1,5 @@
-"""Ngày 07: bài tự làm. Đọc thuc_hanh.md trước khi viết code.
-Chạy từ gốc repo: python scripts/run_day.py 07
+"""Ngày 07: chọn ba cột và đổi amount thành money_vnd.
+Chạy từ gốc repo: uv run python scripts/run_day.py 07
 """
 import os
 import sys
@@ -17,13 +17,14 @@ try:
     orders = (spark.read.option("header", True)
               .schema("order_id string, customer_id string, order_date string, amount long, status string")
               .csv(str(DATA / "orders.csv")))
-    print("Đây là khung bài làm; chạy được khung chưa có nghĩa đã làm xong.")
-    orders.show(truncate=False)
-
-    # BẮT ĐẦU VIẾT BÀI CỦA BẠN Ở ĐÂY
-    # 1. Chọn customer_id, order_date, amount từ bảng nguồn.
-    # 2. Đổi tên amount thành money_vnd trong kết quả này.
-    # 3. In tên cột và số dòng của cả nguồn lẫn kết quả; giải thích phần nào đổi.
-    # KẾT THÚC VÙNG BÀI LÀM
+    # alias đặt tên cột trong bảng kết quả, không đổi cột của bảng nguồn.
+    result = orders.select("customer_id", "order_date", orders["amount"].alias("money_vnd"))
+    result.orderBy("customer_id", "order_date", "money_vnd").show(truncate=False)
+    print("Cột nguồn:", orders.columns)
+    print("Số dòng nguồn:", orders.count())  # 8
+    print("Cột kết quả:", result.columns)
+    print("Số dòng kết quả:", result.count())  # 8
+    print("Kết quả còn 3 cột; amount được đặt tên money_vnd. Nguồn vẫn giữ 5 cột.")
+    print("select chỉ chọn cột, không lọc dòng nên cả hai bảng vẫn có 8 đơn.")
 finally:
     spark.stop()

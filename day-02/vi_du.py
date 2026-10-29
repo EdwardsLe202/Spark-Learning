@@ -1,5 +1,5 @@
 """Ngày 02: ví dụ hoàn chỉnh để đọc và chạy.
-Chạy từ gốc repo: python scripts/run_day.py 02 --example
+Chạy từ gốc repo: uv run python scripts/run_day.py 02 --example
 """
 orders = [
     {"order_id": "O001", "customer_id": "C001", "amount": 100000},

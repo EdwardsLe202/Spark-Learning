@@ -30,7 +30,7 @@ def load_csv(name):
 def main():
     for n in range(1, 31):
         base = ROOT / f"day-{n:02d}"
-        for filename in ["README.md", "ly_thuyet.md", "thuc_hanh.md", "ghi_chu.md", "bai_lam.py"]:
+        for filename in ["README.md", "ly_thuyet.md", "thuc_hanh.md", "bai_lam.py"]:
             path = base / filename
             check(path.is_file() and path.stat().st_size > 0, f"Thiếu/rỗng: {path.relative_to(ROOT)}")
         theory = base / "ly_thuyet.md"

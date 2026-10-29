@@ -26,10 +26,12 @@ Khoảng 60–90 giờ trong 30 buổi dành cho nền PySpark: đọc và hiể
 
 ## Bảo toàn bài làm đang có
 
-Trước khi thay khóa đang học, toàn bộ 178 tệp nội dung cũ được sao chép vào tham_khao/lo_trinh_tong_hop và đối chiếu SHA-256. Có cả bai_lam.py/ghi_chu.md ngày 01 hiện có, tiến độ, dữ liệu, code tiện ích và file gốc. Danh mục hash nằm trong BAN_LUU.json.
+Trước khi thay khóa đang học, toàn bộ 178 tệp nội dung cũ được sao chép vào tham_khao/lo_trinh_tong_hop và đối chiếu SHA-256. Có cả bai_lam.py ngày 01, tiến độ, dữ liệu, code tiện ích và file gốc. Danh mục hash nằm trong BAN_LUU.json.
 
-Không sửa Git index hay tự commit. Nhật ký khóa nền được mở mới; bản cũ giữ nguyên để bạn tra lại. Tên ngày trong hai khóa có ý nghĩa khác nhau.
+Không sửa Git index hay tự commit. Tiến độ khóa nền được mở mới; bản cũ được giữ để tra lại, với các điều chỉnh dọn tệp ghi rõ bên dưới. Tên ngày trong hai khóa có ý nghĩa khác nhau.
 
 ## Giới hạn cần hiểu
 
 Kiểm tra chương trình mẫu xác nhận code/dữ liệu và đầu ra được kỳ vọng, không chứng minh người học đã hiểu. Tiêu chí học là tự làm biến thể, giải thích được kết quả và biết thu nhỏ một lỗi. Nếu một đoạn lý thuyết vẫn khó, đó là chỗ cần viết thêm ví dụ, không phải lý do ép chuyển ngày.
+
+Ngày 29/10/2026, theo yêu cầu người học, đã xóa các file ghi chú ở mọi ngày, kể cả bản tham khảo, và sửa hướng dẫn liên quan. BAN_LUU.json cập nhật hash của các file đã sửa, giữ hash trước thay đổi trong mục maintenance để đối chiếu lịch sử.

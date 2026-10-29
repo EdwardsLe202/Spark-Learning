@@ -1,6 +1,6 @@
 # Ngày 01 — Thực hành
 
-[Trang ngày](README.md) · [Lý thuyết](ly_thuyet.md) · [File làm bài](bai_lam.py) · [Nhật ký](ghi_chu.md)
+[Trang ngày](README.md) · [Lý thuyết](ly_thuyet.md) · [File làm bài](bai_lam.py)
 
 ## Đầu vào và chỗ làm
 
@@ -11,7 +11,7 @@ Chạy từ **thư mục gốc repo**, sau khi kích hoạt môi trường ở [
 ## Các bước thực hiện
 
 1. Mở `data/README.md`, xem hai file CSV và ghi ý nghĩa mỗi dòng.
-2. Trong `ghi_chu.md`, chọn công cụ cho ba tình huống: CSV 20 MB, giao dịch nhiều năm cần tổng hợp theo khách hàng, sự kiện ứng dụng tới liên tục. Ghi cả giả định RAM và yêu cầu thời gian.
+2. Trong phần comment trong `bai_lam.py`, chọn công cụ cho ba tình huống: CSV 20 MB, giao dịch nhiều năm cần tổng hợp theo khách hàng, sự kiện ứng dụng tới liên tục. Ghi cả giả định RAM và yêu cầu thời gian.
 3. Vẽ sơ đồ trên bằng Markdown hoặc Mermaid. Gắn tên công cụ vào từng bước.
 4. Chạy file khởi động bằng lệnh bên dưới; sửa để in thêm đường dẫn bảng khách hàng.
 5. Viết 5–8 câu giải thích vì sao repo dùng dữ liệu nhỏ để học nguyên lý Spark.
@@ -22,7 +22,7 @@ Chạy từ **thư mục gốc repo**, sau khi kích hoạt môi trường ở [
 python scripts/run_day.py 01
 ```
 
-Lưu đầu ra tự tạo ở `artifacts/day-01/` bằng `output_dir(1)`; thư mục này được Git bỏ qua. Ghi đường dẫn bằng chứng vào `ghi_chu.md`. Nếu ngày sau cần artifact, giữ lại hoặc tái tạo bằng lệnh đã ghi. Không sửa `data/raw/` để làm đẹp kết quả; tạo bản thử ở artifacts.
+Lưu đầu ra tự tạo ở `artifacts/day-01/` bằng `output_dir(1)`; thư mục này được Git bỏ qua. Ghi đường dẫn bằng chứng vào phần comment trong `bai_lam.py`. Nếu ngày sau cần artifact, giữ lại hoặc tái tạo bằng lệnh đã ghi. Không sửa `data/raw/` để làm đẹp kết quả; tạo bản thử ở artifacts.
 
 ## Kết quả cần đối chiếu
 
@@ -43,5 +43,5 @@ Khi kết quả khác kỳ vọng, thu nhỏ về fixture, in schema và các d�
 - [ ] Đã làm đủ các bước cốt lõi, có lệnh tái chạy và đầu ra thật.
 - [ ] Đã đối chiếu kết quả trên, không chỉ thấy chương trình chạy không lỗi.
 - [ ] Có ít nhất một biến thể hoặc ca lỗi để kiểm tra hiểu biết.
-- [ ] Đã trả lời câu hỏi ở lý thuyết trong `ghi_chu.md`.
+- [ ] Đã trả lời câu hỏi ở lý thuyết trong phần comment trong `bai_lam.py`.
 - [ ] Phân biệt phần chạy thật, mô phỏng và phần mở rộng chưa làm.

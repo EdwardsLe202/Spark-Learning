@@ -1,5 +1,5 @@
-"""Ngày 08: bài tự làm. Đọc thuc_hanh.md trước khi viết code.
-Chạy từ gốc repo: python scripts/run_day.py 08
+"""Ngày 08: lọc theo khách, kết hợp điều kiện và kiểm tra giá trị biên.
+Chạy từ gốc repo: uv run python scripts/run_day.py 08
 """
 import os
 import sys
@@ -17,13 +17,23 @@ try:
     orders = (spark.read.option("header", True)
               .schema("order_id string, customer_id string, order_date string, amount long, status string")
               .csv(str(DATA / "orders.csv")))
-    print("Đây là khung bài làm; chạy được khung chưa có nghĩa đã làm xong.")
-    orders.show(truncate=False)
+    # 1. Dự đoán C001 có O001, O002, O008.
+    customer_orders = orders.filter(orders["customer_id"] == "C001")
+    print("Các đơn của C001 (dự đoán: O001, O002, O008):")
+    customer_orders.orderBy("order_id").show(truncate=False)
 
-    # BẮT ĐẦU VIẾT BÀI CỦA BẠN Ở ĐÂY
-    # 1. Lọc riêng customer_id bằng C001: dự đoán mã đơn rồi chạy.
-    # 2. Lọc completed và amount > 150000. So với ví dụ >=, đơn nào mất đi?
-    # 3. Lọc status=cancelled và mô tả đúng đơn còn lại.
-    # KẾT THÚC VÙNG BÀI LÀM
+    # 2. Mỗi điều kiện cần ngoặc; dùng & để yêu cầu đồng thời cả hai.
+    at_least = orders.filter((orders["status"] == "completed") & (orders["amount"] >= 150000))
+    above = orders.filter((orders["status"] == "completed") & (orders["amount"] > 150000))
+    print("completed và amount >= 150000: O002, O005, O008")
+    at_least.orderBy("order_id").show(truncate=False)
+    print("completed và amount > 150000: O002, O008")
+    above.orderBy("order_id").show(truncate=False)
+    print("O005 bị loại khi dùng > vì amount = 150000, đúng bằng ngưỡng.")
+
+    # 3. Lọc trạng thái riêng, không mang điều kiện amount từ bước trước.
+    cancelled = orders.filter(orders["status"] == "cancelled")
+    cancelled.orderBy("order_id").show(truncate=False)
+    print("O004: khách C003, ngày 2025-01-04, trị giá 300000 đồng, đã hủy.")
 finally:
     spark.stop()

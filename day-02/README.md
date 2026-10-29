@@ -7,8 +7,8 @@
 ## Mở theo thứ tự này
 
 1. Đọc [ly_thuyet.md](ly_thuyet.md), dừng tại ví dụ để tự dự đoán.
-2. Mở [thuc_hanh.md](thuc_hanh.md): chạy mẫu, thay một chi tiết, rồi tự làm.
-3. Viết vài dòng vào [ghi_chu.md](ghi_chu.md). Không cần mở các ngày khác.
+2. Mở [thuc_hanh.md](thuc_hanh.md) để xem đề bài; [bai_lam.py](bai_lam.py) đã có lời giải đầy đủ để chạy và đối chiếu.
+3. Đối chiếu kết quả trong [bai_lam.py](bai_lam.py). Nếu cần, ghi giải thích bằng comment ngay cạnh code.
 
 **Cần biết trước:** Đã đạt tiêu chí của [ngày 01](../day-01/README.md).
 
@@ -26,3 +26,9 @@ Nếu hết giờ mà chưa hiểu, học tiếp bài này ở buổi sau. Số 
 Tự lọc C002 được 50000 và thêm O004 tính được tổng 420000 bằng Python.
 
 Chưa tự làm được thì mở gợi ý ở cuối bài thực hành, thử lại một lần. Khi cần hỏi: “Tôi ở ngày 02, mục ..., đầu vào ..., tôi nghĩ kết quả là ..., nhưng chạy ra ...”.
+
+## Bài làm đã hoàn thiện
+
+Lọc C002 được O003 và 50000; amount >= 100000 giữ O001/O002; thêm O004 được 420000; có thêm phép lọc bằng vòng for.
+
+Chạy từ gốc repo: `uv run python scripts/run_day.py 02`. Các câu trả lời và giải thích nằm ngay trong bài làm.

@@ -1,4 +1,4 @@
-# Ngày 03 — Cài môi trường, từng bước
+# Ngày 03 — Cài môi trường và chạy bằng uv
 
 [Về ngày 03](../day-03/README.md)
 
@@ -29,24 +29,23 @@ Nếu hiện phiên bản uv, sang bước 3. Nếu command not found, mở ph�
 
 Nếu máy đã dùng Homebrew, chạy `brew install uv`, rồi kiểm tra `uv --version`. Nếu cũng chưa có Homebrew, ghi lại lỗi và nhờ hướng dẫn cài công cụ trước; bạn không cần tự đoán lệnh hệ thống. [Tài liệu uv](https://docs.astral.sh/uv/getting-started/installation/) có các cách cài chính thức.
 
-Nếu máy đã có lệnh python3.11, có thể dùng `python3.11 -m venv .venv` thay bước uv tạo môi trường. Các bước activate, pip và kiểm tra phía sau vẫn giữ nguyên.
+Sau khi có uv, tiếp tục bước 3 bên dưới.
 
 </details>
 
-## Bước 3 — Tạo và chọn Python riêng cho repo
+## Bước 3 — Để uv chuẩn bị môi trường của repo
 
-**Virtual environment (môi trường Python riêng)** được lưu trong thư mục .venv. Chạy từng lệnh:
+Repo có `.python-version` chọn Python 3.11, `pyproject.toml` khai báo PySpark 3.5.7 và `uv.lock` chốt phiên bản phụ thuộc. Chạy ở gốc repo:
 
 ```bash
-uv venv --python 3.11 --seed .venv
-source .venv/bin/activate
-python --version
-python -c "import sys; print(sys.executable)"
+uv sync --locked
+uv run python --version
+uv run python -c "import sys; print(sys.executable)"
 ```
 
-Bạn cần thấy Python 3.11.x và đường dẫn Python bên trong .venv. `--seed` cài pip để dùng ở bước 5. uv có thể tải Python nếu chưa có, nên bước đầu cần mạng.
+Bạn cần thấy Python 3.11.x và đường dẫn Python bên trong `.venv`. uv tự tạo môi trường và có thể tải Python nếu chưa có. Lần đầu cần mạng để tải PySpark; gói này khá lớn.
 
-Nếu đã có .venv của repo từ trước, thử activate và kiểm tra phiên bản trước; không xóa môi trường đang có để tạo lại một cách mù quáng. Khi Python chưa đúng, dừng và ghi kết quả cần sửa.
+Không cần `source .venv/bin/activate`. Mỗi lần `uv run`, uv tự chọn môi trường của dự án. Python toàn máy không bị thay đổi.
 
 ## Bước 4 — Kiểm tra Java
 
@@ -81,35 +80,42 @@ Chỉ dùng nhánh này nếu cài Java bằng Homebrew. Không cần tạo syml
 
 </details>
 
-## Bước 5 — Cài PySpark vào đúng môi trường
-
-Vẫn ở terminal đã activate .venv:
+## Bước 5 — Kiểm tra PySpark bằng uv
 
 ```bash
-python -m pip install -r requirements.txt
-python -c "import pyspark; print(pyspark.__version__)"
+uv run python -c "import pyspark; print(pyspark.__version__)"
 ```
 
-Bạn cần thấy **3.5.7**. Package Spark tương đối lớn, lần cài đầu cần mạng và thời gian tải. `python -m pip` dùng pip gắn với chính Python đang chạy. Các requirements-ml/api/ai ở repo thuộc bản tham khảo cũ; chưa cài chúng ở khóa nền này.
+Bạn cần thấy **3.5.7**. `uv sync` ở bước 3 đã cài thư viện; không cần gọi pip. Các file requirements cho ML/API/AI thuộc chặng nâng cao, chưa cần cài ở khóa nền này.
 
-## Bước 6 — Chạy kiểm tra phiên bản của ngày 03
+## Bước 6 — Chạy bài học bằng uv
 
 ```bash
-python scripts/run_day.py 03 --example
+uv run python scripts/run_day.py 03 --example
+uv run python scripts/run_day.py 03
 ```
 
-Ghi Python 3.11.x, PySpark 3.5.7, Java 17 và đường dẫn interpreter vào nhật ký ngày 03. Sau đó mở terminal mới, activate lại và chạy được cùng lệnh là đạt mục tiêu.
+Bài làm in và kiểm tra Python 3.11.x, PySpark 3.5.7, Java 17 cùng đường dẫn interpreter. Mở terminal mới ở gốc repo và chạy lại cùng lệnh; không cần activate.
 
-Ngày 04 mới chạy Spark thật bằng `python scripts/run_day.py 04 --example`, có bảng ba dòng và count=3. Không cần tự học Parquet hay Spark UI để hoàn thành cài đặt.
+Ngày 04 chạy Spark thật bằng `uv run python scripts/run_day.py 04 --example`, có bảng ba dòng và count=3. Bài làm ngày 04 thêm O004, nên bảng cuối có 4 dòng.
+
+Bạn cũng có thể chạy trực tiếp file của ngày 01–08, ví dụ:
+
+```bash
+uv run python day-08/bai_lam.py
+uv run python day-08/vi_du.py
+```
+
+Runner là cách dùng chung cho cả lộ trình, tự thêm đường dẫn import và đặt thư mục làm việc đúng. Các ngày nâng cao có thể cần thư viện và dịch vụ riêng theo README của ngày.
 
 ## Khi gặp lỗi
 
 | Thấy gì? | Kiểm tra trước |
 | --- | --- |
 | Không tìm được scripts/run_day.py | pwd có đang ở Spark-Learning không? |
-| ModuleNotFoundError: pyspark | Python có thuộc .venv không? Đã cài requirements bằng chính Python đó chưa? |
+| ModuleNotFoundError: pyspark | Có đang chạy bằng uv run ở gốc repo không? Thử uv sync --locked. |
 | Java gateway exited ở ngày 04 | java -version, JAVA_HOME và dòng nguyên nhân Java trước thông báo cuối |
-| Python worker lệch phiên bản | Chạy qua runner; nó đặt Python worker theo Python đang chạy nếu chưa cấu hình khác |
+| Python worker lệch phiên bản | Chạy uv run python scripts/run_day.py; runner đặt Python worker theo Python đang chạy nếu chưa cấu hình khác |
 | Lỗi bind/hostname local | Có thể thử `export SPARK_LOCAL_IP=127.0.0.1` trong terminal học rồi chạy lại; đây chỉ là cấu hình local |
 | Notebook chạy khác terminal | Khóa bắt đầu bằng file Python; chưa cần notebook để hoàn thành các ngày đầu |
 

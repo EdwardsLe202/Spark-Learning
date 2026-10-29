@@ -1,6 +1,6 @@
 # Ngày 42 — Thực hành từng bước
 
-[Lý thuyết](ly_thuyet.md) · [Ví dụ](vi_du.py) · [Tự viết](bai_lam.py) · [Ghi chú](ghi_chu.md)
+[Lý thuyết](ly_thuyet.md) · [Ví dụ](vi_du.py) · [Tự viết](bai_lam.py)
 
 ## Bước 1 — Đọc đầu vào và đoán
 
@@ -53,7 +53,7 @@ Ví dụ hoàn chỉnh nằm trong vi_du.py. Với biến thể cần model/dị
 - [ ] Tôi giải thích được đầu vào và phần code đang học.
 - [ ] Tôi đã chạy mẫu trong môi trường đúng, ghi phần chưa chạy nếu còn thiếu.
 - [ ] Tôi tự làm đủ các bước lab, có biến thể/ca lỗi và đối chiếu.
-- [ ] Tôi lưu lệnh, version, kết quả và điều còn vướng trong ghi_chu.md.
+- [ ] Tôi kiểm tra lệnh, phiên bản, kết quả và xác định phần còn vướng.
 
 **Tiêu chí cụ thể:** Ngày 2025-01-03 có 2 đơn; chỉ nhận xét cơ chế xuất hiện trong plan.
 

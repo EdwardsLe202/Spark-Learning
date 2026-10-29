@@ -9,10 +9,10 @@ Nếu đã quen đọc bảng từ Python/SQL, bạn có thể đọc nhanh ph�
 1. Mở [Ngày 01](day-01/README.md).
 2. Đọc bảng **ba đơn hàng**, hiểu một dòng là một đơn.
 3. Tính tay tổng ba đơn và riêng khách C001.
-4. Làm biến thể thêm một đơn, viết câu trả lời vào ghi_chu.md.
+4. Làm biến thể thêm một đơn, viết câu trả lời vào phần comment trong bai_lam.py.
 5. Nếu chưa giải thích được, dừng tại đó và hỏi đúng câu đang vướng.
 
-**Hôm nay không cần cài Spark, vẽ hệ thống hay học một danh sách công cụ.**
+**Hôm nay có thể chỉ đọc và tính tay.** Nếu muốn chạy file bằng uv, `uv run` sẽ chuẩn bị môi trường và tải PySpark theo cấu hình repo ngay lần đầu; xem [cài đặt](docs/CAI_DAT.md).
 
 ## Sau ngày 01
 
@@ -25,7 +25,7 @@ Nếu đã quen đọc bảng từ Python/SQL, bạn có thể đọc nhanh ph�
 
 Đọc và tự đoán trước khi chạy. Chạy một ví dụ, giải thích từng phần, thay một chi tiết rồi tự viết biến thể. Đóng lời giải khi làm lại. Nếu code chạy mà bạn chưa biết vì sao ra kết quả, chưa chuyển tiếp.
 
-Mỗi ngày bạn chỉ cần đọc lý thuyết và thực hành của ngày ấy. `vi_du.py` là mẫu có lời giải, `bai_lam.py` là chỗ bạn viết. Ghi chú chỉ cần vài dòng; không phải một báo cáo kỹ thuật.
+Mỗi ngày bạn chỉ cần đọc lý thuyết và thực hành của ngày ấy. `vi_du.py` là mẫu; `bai_lam.py` ngày 01–08 đã có lời giải đầy đủ để đối chiếu, các ngày sau có khung tự viết. Nếu cần giải thích, viết vài dòng comment ngay trong bài làm.
 
 ## Khi bị kẹt
 

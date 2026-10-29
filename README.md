@@ -75,17 +75,16 @@ Ngày 14 là buổi ôn; ngày 29–30 dành để tự ghép lại và sửa ph
 - `ly_thuyet.md`: giải thích từ ví dụ, thuật ngữ English (tiếng Việt), đọc từng lệnh.
 - `thuc_hanh.md`: đoán → chạy mẫu → thay đổi nhỏ → tự làm → đối chiếu.
 - `vi_du.py`: chương trình mẫu hoàn chỉnh; từ ngày 04 có đủ mở/đóng Spark.
-- `bai_lam.py`: chỗ bạn tự viết; dùng mẫu khởi tạo, tập trung logic đang học.
-- `ghi_chu.md`: ghi ngắn điều hiểu, kết quả và câu chưa rõ.
+- `bai_lam.py`: bài làm theo ngày; ngày 01–08 đã có lời giải đầy đủ, các ngày sau có khung để tự viết.
 
-Từ ngày 03, dùng môi trường đã cài. Ví dụ ngày 08:
+Từ ngày 03, dùng `uv sync` để chuẩn bị môi trường; `uv run` tự chọn Python của repo, không cần activate. Ví dụ ngày 08:
 
 ```bash
-python scripts/run_day.py 08 --example
-python scripts/run_day.py 08
+uv run python scripts/run_day.py 08 --example
+uv run python scripts/run_day.py 08
 ```
 
-Lệnh đầu chạy mẫu; lệnh sau chạy bài làm của bạn. Chưa cần hiểu hay sửa code trong scripts.
+Lệnh đầu chạy mẫu; lệnh sau chạy bài làm. Ngày 01–08 đã hoàn thiện code và câu trả lời, xem trạng thái trong [TIEN_DO.md](TIEN_DO.md). Chưa cần hiểu hay sửa code trong scripts.
 
 ## Đọc sau, khi cần
 
@@ -95,4 +94,4 @@ Lệnh đầu chạy mẫu; lệnh sau chạy bài làm của bạn. Chưa cần
 - [Học tiếp ML, MLOps và AI sau nền Spark](docs/HOC_TIEP.md).
 - [Nguồn chính thức](docs/NGUON_HOC.md) và [phạm vi đã kiểm tra](docs/KIEM_TRA.md).
 
-Bản trước ghép cả Spark, MLOps và AI vào 30 ngày nên đi quá nhanh cho người mới. Toàn bộ nội dung cũ, **bài làm và ghi chú ngày 01 đang có**, cùng tiến độ cũ đã được giữ tại [tham_khao](tham_khao/README.md). Tài liệu gốc vẫn có ở [file Word](Lo_trinh_Spark_MLOps_AI_Engineering.docx). Bạn không cần học lại bản cũ song song.
+Bản trước ghép cả Spark, MLOps và AI vào 30 ngày nên đi quá nhanh cho người mới. Toàn bộ nội dung cũ, **bài làm ngày 01**, cùng tiến độ cũ đã được giữ tại [tham_khao](tham_khao/README.md). Tài liệu gốc vẫn có ở [file Word](Lo_trinh_Spark_MLOps_AI_Engineering.docx). Bạn không cần học lại bản cũ song song.
